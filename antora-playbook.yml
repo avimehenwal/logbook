@@ -1,18 +1,24 @@
 site:
   title: Log Book
   url: https://avimehenwal.github.io/logbook/
-  start_page: cambridge_mqtt::index.adoc
+  start_page: work_log::index.adoc
 
 content:
   sources:
+  # - url: .
+  #   branches: develop
+  #   start_path: sample-component
   - url: .
     branches: develop
-    start_path: sample-component
+    start_path: worklog
 
 asciidoc:
+  # javascript modules
   extensions:
     - asciidoctor-plantuml
     - asciidoctor-kroki
+    - asciidoctor-chart
+    - asciidoctor-emoji
   attributes:
     plantuml-server-url: 'http://www.plantuml.com/plantuml'
 

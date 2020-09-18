@@ -10,7 +10,7 @@ clean:
 	rm -r ${DIST}
 
 build:
-	antora antora-playbook.yml
+	antora --stacktrace antora-playbook.yml
 
 serve:
 	http-server ${DIST} -o

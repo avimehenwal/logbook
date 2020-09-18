@@ -1,0 +1,218 @@
+---
+title: "Example"
+date: 2020-09-18T11:21:34+02:00
+draft: true
+---
+
+Hierarchy is not supported in asciidoc
+
+If I start writing chapters in `chapter/*.adoc` directory, it would still be located at root
+in destination folder. HIerarchy with `chapter` is skipped
+
+== My Document's Title
+Doc Writer <doc.writer@asciidoctor.org>
+v1.0, 2018-04-11
+:toc:
+:imagesdir: assets/images
+:homepage: https://asciidoctor.org
+
+My document provides...
+NOTE: An admonition paragraph draws the reader's attention to
+auxiliary information.
+Its purpose is determined by the label
+at the beginning of the paragraph.
+
+[graphviz]
+....
+digraph D {
+
+  A [shape=diamond]
+  B [shape=box]
+  C [shape=circle]
+
+  A -> B [style=dashed, color=grey]
+  A -> C [color="black:invis:black"]
+  A -> D [penwidth=5, arrowhead=none]
+
+}
+....
+
+Here are the other built-in admonition types:
+
+TIP: Pro tip...
+
+IMPORTANT: Don't forget...
+
+WARNING: Watch out for...
+
+CAUTION: Ensure that...
+
+[.lead]
+This text will be styled as a lead paragraph (i.e., larger font).
+
+bold *constrained* & **un**constrained
+
+italic _constrained_ & __un__constrained
+
+bold italic *_constrained_* & **__un__**constrained
+
+monospace `constrained` & ``un``constrained
+
+monospace bold `*constrained*` & ``**un**``constrained
+
+monospace italic `_constrained_` & ``__un__``constrained
+
+monospace bold italic `*_constrained_*` & ``**__un__**``constrained
+
+`{cpp}` is valid syntax in the programming language by the same name.
+
+`+WHERE id <= 20 AND value = "{name}"+` is a SQL WHERE clause.
+
+Werewolves are allergic to #cassia cinnamon#.
+
+Did the werewolves read the [.small]#small print#?
+
+Where did all the [.underline]#cores# run off to?
+
+We need [.line-through]#ten# make that twenty VMs.
+
+[.big]##O##nce upon an infinite loop.
+
+^super^script phrase
+
+~sub~script phrase
+
+"`double curved quotes`"
+
+'`single curved quotes`'
+
+Olaf's desk was a mess.
+
+All of the werewolves`' desks were a mess.
+
+Olaf had been with the company since the `'60s.
+
+== Document Title (Level 0)
+
+== Level 1 Section Title
+
+=== Level 2 Section Title
+
+==== Level 3 Section Title
+
+===== Level 4 Section Title
+
+====== Level 5 Section Title
+
+== Another Level 1 Section Title
+
+* [*] checked
+* [x] also checked
+* [ ] not checked
+*     normal list item
+
+first term:: definition of first term
+second term:: definition of second term
+
+[qanda]
+What is Asciidoctor?::
+  An implementation of the AsciiDoc processor in Ruby.
+What is the answer to the Ultimate Question?:: 42
+
+Operating Systems::
+  Linux:::
+    . Fedora
+      * Desktop
+    . Ubuntu
+      * Desktop
+      * Server
+  BSD:::
+    . FreeBSD
+    . NetBSD
+
+Cloud Providers::
+  PaaS:::
+    . OpenShift
+    . CloudBees
+  IaaS:::
+    . Amazon EC2
+    . Rackspace
+
+video::rPQoq7ThGAU[youtube]
+
+[source,ruby]
+----
+require 'sinatra' // <1>
+
+get '/hi' do // <2>
+  "Hello World!" // <3>
+end
+----
+<1> Library import
+<2> URL mapping
+<3> HTTP response body
+
+.AsciiDoc history
+****
+AsciiDoc was first released in Nov 2002 by Stuart Rackham.
+It was designed from the start to be a shorthand syntax
+for producing professional documents like DocBook and LaTeX.
+****
+
+.Sample document
+====
+Here's a sample AsciiDoc document:
+
+[listing]
+....
+= Title of Document
+Doc Writer
+:toc:
+
+This guide provides...
+....
+
+The document header is useful, but not required.
+====
+
+[NOTE]
+====
+An admonition block may contain complex content.
+
+.A list
+- one
+- two
+- three
+
+Another paragraph.
+====
+
+.Table Title
+|===
+|Name of Column 1 |Name of Column 2 |Name of Column 3
+
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+|Cell in column 3, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
+
+_The Pragmatic Programmer_ <<pp>> should be required reading for all developers.
+To learn all about design patterns, refer to the book by the "`Gang of Four`" <<gof>>.
+
+[bibliography]
+== References
+
+- [[[pp]]] Andy Hunt & Dave Thomas. The Pragmatic Programmer:
+  From Journeyman to Master. Addison-Wesley. 1999.
+- [[[gof,2]]] Erich Gamma, Richard Helm, Ralph Johnson & John Vlissides. Design Patterns:
+  Elements of Reusable Object-Oriented Software. Addison-Wesley. 1994.
+
+A statement.footnote:[Clarification about this statement.]
+
+A bold statement!footnote:disclaimer[Opinions are my own.]
+
+Another bold statement.footnote:disclaimer[]

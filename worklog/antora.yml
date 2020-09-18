@@ -1,0 +1,6 @@
+name: work_log
+title: My Work Log
+version: 0.01
+start_page: ROOT:index.adoc
+nav:
+- modules/ROOT/nav.adoc

@@ -1,0 +1,6 @@
+= Index File
+
+.Pages
+* link:example[Example]
+* link:chart[Chart]
+* link:setup[Setup]
