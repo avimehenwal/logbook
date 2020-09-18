@@ -1,11 +1,20 @@
 === 1 Scope of document
+:icons: font
 
-Zazwyczaj to co tu jest, a to co każdy zazwyczaj pomija
+icon:tags[role="blue"] ruby, asciidoctor
+
+Zazwyczaj to co tu jest, a to co każdy zazwyczaj pomija [green]#Green text#
+
 
 == Who are using it?
 
+icon:tags[role="blue"] ruby, asciidoctor
+
+icon:heart[size=2x]
+
 . Fedora Docs are on antora <<f,doc>> <<f,source>>
 . https://pagure.io/fedora-docs/fedora-docs-ui
+. https://github.com/apache/camel-website
 
 == How are they using it?
 

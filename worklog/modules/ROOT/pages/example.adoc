@@ -15,6 +15,8 @@ v1.0, 2018-04-11
 :toc:
 :imagesdir: assets/images
 :homepage: https://asciidoctor.org
+:kroki-fetch-diagram:
+
 
 My document provides...
 NOTE: An admonition paragraph draws the reader's attention to
@@ -22,7 +24,7 @@ auxiliary information.
 Its purpose is determined by the label
 at the beginning of the paragraph.
 
-[graphviz]
+[graphviz, svg]
 ....
 digraph D {
 
@@ -43,7 +45,7 @@ TIP: Pro tip...
 
 IMPORTANT: Don't forget...
 
-WARNING: Watch out for...
+WARNING: https://github.com/asciidoctor/asciidoctor-chart/[How to use charts?]
 
 CAUTION: Ensure that...
 

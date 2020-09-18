@@ -5,3 +5,174 @@
 * link:chart[Chart]
 * link:setup[Setup]
 * link:ui[Default UI]
+
+[plantuml, svg]
+....
+@startmindmap
+*[#Orange] Colors
+**[#lightgreen] Green
+**[#FFBBCC] Rose
+**[#lightblue] Blue
+@endmindmap
+....
+
+[vegalite]
+....
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "The PM2.5 value of Beijing observed 15 days, highlighting the days when PM2.5 level is hazardous to human health. Data source https://chartaccent.github.io/chartaccent.html",
+    "layer": [{
+      "data": {
+        "values": [
+          {"Day": 1, "Value": 54.8},
+          {"Day": 2, "Value": 112.1},
+          {"Day": 3, "Value": 63.6},
+          {"Day": 4, "Value": 37.6},
+          {"Day": 5, "Value": 79.7},
+          {"Day": 6, "Value": 137.9},
+          {"Day": 7, "Value": 120.1},
+          {"Day": 8, "Value": 103.3},
+          {"Day": 9, "Value": 394.8},
+          {"Day": 10, "Value": 199.5},
+          {"Day": 11, "Value": 72.3},
+          {"Day": 12, "Value": 51.1},
+          {"Day": 13, "Value": 112.0},
+          {"Day": 14, "Value": 174.5},
+          {"Day": 15, "Value": 130.5}
+        ]
+      },
+      "layer": [{
+        "mark": "bar",
+        "encoding": {
+          "x": {"field": "Day", "type": "ordinal", "axis": {"labelAngle": 0}},
+          "y": {"field": "Value", "type": "quantitative"}
+        }
+      }, {
+        "mark": "bar",
+        "transform": [
+          {"filter": "datum.Value >= 300"},
+          {"calculate": "300", "as": "baseline"}
+        ],
+        "encoding": {
+          "x": {"field": "Day", "type": "ordinal"},
+          "y": {"field": "baseline", "type": "quantitative", "title": "PM2.5 Value"},
+          "y2": {"field": "Value"},
+          "color": {"value": "#e45755"}
+        }
+      }
+    ]}, {
+      "data": {
+         "values": [{}]
+      },
+      "encoding": {
+        "y": {"datum": 300}
+      },
+      "layer": [{
+        "mark": "rule"
+      }, {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "bottom",
+          "dx": -2,
+          "dy": -2,
+          "x": "width",
+          "text": "hazardous"
+        }
+      }]
+    }
+  ]
+}
+....
+
+[vega]
+....
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "A basic donut chart example.",
+  "width": 200,
+  "height": 200,
+  "autosize": "none",
+
+  "signals": [
+    {
+      "name": "startAngle", "value": 1,
+      "bind": {"input": "range", "min": 0, "max": 6.29, "step": 0.01}
+    },
+    {
+      "name": "endAngle", "value": 6.29,
+      "bind": {"input": "range", "min": 0, "max": 6.29, "step": 0.01}
+    },
+    {
+      "name": "padAngle", "value": 0.065,
+      "bind": {"input": "range", "min": 0, "max": 0.1}
+    },
+    {
+      "name": "innerRadius", "value": 60,
+      "bind": {"input": "range", "min": 0, "max": 90, "step": 1}
+    },
+    {
+      "name": "cornerRadius", "value": 7,
+      "bind": {"input": "range", "min": 0, "max": 10, "step": 0.5}
+    },
+    {
+      "name": "sort", "value": false,
+      "bind": {"input": "checkbox"}
+    }
+  ],
+
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {"id": 1, "field": 4},
+        {"id": 2, "field": 6},
+        {"id": 3, "field": 10},
+        {"id": 4, "field": 3},
+        {"id": 5, "field": 7},
+        {"id": 6, "field": 8}
+      ],
+      "transform": [
+        {
+          "type": "pie",
+          "field": "field",
+          "startAngle": {"signal": "startAngle"},
+          "endAngle": {"signal": "endAngle"},
+          "sort": {"signal": "sort"}
+        }
+      ]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "table", "field": "id"},
+      "range": {"scheme": "category20"}
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "arc",
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "fill": {"scale": "color", "field": "id"},
+          "x": {"signal": "width / 2"},
+          "y": {"signal": "height / 2"}
+        },
+        "update": {
+          "startAngle": {"field": "startAngle"},
+          "endAngle": {"field": "endAngle"},
+          "padAngle": {"signal": "padAngle"},
+          "innerRadius": {"signal": "innerRadius"},
+          "outerRadius": {"signal": "width / 2"},
+          "cornerRadius": {"signal": "cornerRadius"}
+        }
+      }
+    }
+  ]
+}
+....

@@ -8,10 +8,10 @@ site:
 content:
   sources:
   - url: .
-    branches: develop
+    branches: HEAD
     start_path: sample
   - url: .
-    branches: develop
+    branches: HEAD
     start_path: worklog
 
 asciidoc:
@@ -22,6 +22,7 @@ asciidoc:
     - asciidoctor-chart
     - asciidoctor-emoji
   attributes:
+    kroki-fetch-diagram: true
     plantuml-server-url: 'http://www.plantuml.com/plantuml'
     experimental: ''
 
