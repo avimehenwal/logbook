@@ -1,0 +1,38 @@
+=== 1 Scope of document
+
+Zazwyczaj to co tu jest, a to co każdy zazwyczaj pomija
+
+== Who are using it?
+
+. Fedora Docs are on antora <<f,doc>> <<f,source>>
+. https://pagure.io/fedora-docs/fedora-docs-ui
+
+== How are they using it?
+
+* Homepage has a layout, with pre-formatted HTML markup
+* We want CI to build and test our website
+
+component:: A section of documentation that can be split up into seperate repo
+
+== How to develop UI
+
+- https://docs.antora.org/antora-ui-default/
+- https://pagure.io/fedora-docs/fedora-docs-ui
+
+kbd:[F11]
+
+== Add Search
+
+. Build The Index
+. Perform a search
+
+
+== Features
+
+- [x] seggregate documentation as per teams
+
+[bibliography]
+== References
+
+- [[[f,doc]]] https://docs.fedoraproject.org/en-US/docs/
+- [[[f,source]]] https://pagure.io/fedora-docs/pages/tree/master[Fedora docs source]

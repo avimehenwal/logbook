@@ -1,13 +1,15 @@
 site:
   title: Log Book
-  url: https://avimehenwal.github.io/logbook/
-  start_page: work_log::index.adoc
+  # url: https://avimehenwal.github.io/logbook/
+  url: https://localhost:8080
+  # start_page: work_log::index.adoc
+  start_page: sample::chapter_1.adoc
 
 content:
   sources:
-  # - url: .
-  #   branches: develop
-  #   start_path: sample-component
+  - url: .
+    branches: develop
+    start_path: sample
   - url: .
     branches: develop
     start_path: worklog
@@ -21,12 +23,15 @@ asciidoc:
     - asciidoctor-emoji
   attributes:
     plantuml-server-url: 'http://www.plantuml.com/plantuml'
+    experimental: ''
+
 
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     # url: https://github.com/decidim/documentation-antora-ui/releases/download/v0.2/ui-bundle.zip
     snapshot: true
+  supplemental_files: ./supplemental_ui
 
 output:
   clean: true
@@ -61,3 +66,5 @@ output:
 #   extensions:
 #   # - asciidoctor-emoji-macro
 #   - asciidoctor-kroki
+
+# https://gitlab.com/antora/docs.antora.org/-/blob/master/antora-playbook.yml

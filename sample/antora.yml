@@ -1,4 +1,4 @@
-name: cambridge_mqtt
+name: sample
 title: Cambirdge Mqtt Documentation
 version: 0.01
 start_page: ROOT:chapter_1.adoc

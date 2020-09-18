@@ -18,6 +18,7 @@
     "release",
     "vscode",
     "make",
-    "antora"
+    "antora",
+    "search"
   ]
 }
