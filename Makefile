@@ -1,4 +1,4 @@
-all: a clean build serve
+all: a build serve
 
 SHELL:=/bin/bash
 DIST:=dist
@@ -7,7 +7,7 @@ a:
 	@echo "Using $$0"
 
 clean:
-	rm -rfv ${DIST}
+	rm -r ${DIST}
 
 build:
 	antora antora-playbook.yml

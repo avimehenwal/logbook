@@ -1,13 +1,13 @@
 site:
   title: Log Book
-  url: https://my-antora-demo-site.org
+  url: https://avimehenwal.github.io/logbook/
   start_page: cambridge_mqtt::index.adoc
 
 content:
   sources:
   - url: .
     branches: develop
-    start_path: docs
+    start_path: sample-component
 
 asciidoc:
   extensions:
