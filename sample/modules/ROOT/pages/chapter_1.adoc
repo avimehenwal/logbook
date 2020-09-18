@@ -15,6 +15,9 @@ icon:heart[size=2x]
 . Fedora Docs are on antora <<f,doc>> <<f,source>>
 . https://pagure.io/fedora-docs/fedora-docs-ui
 . https://github.com/apache/camel-website
+. https://docs.fauna.com/fauna/current/
+. https://www.uyuni-project.org/uyuni-docs/uyuni/index.html
+
 
 == How are they using it?
 
@@ -43,7 +46,6 @@ kbd:[F11]
 
 - [x] seggregate documentation as per teams
 
-[bibliography]
 == References
 
 - [[[f,doc]]] https://docs.fedoraproject.org/en-US/docs/

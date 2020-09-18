@@ -7,12 +7,16 @@
     <link rel="canonical" href="http://127.0.0.1:8080/sample/0.01/chapter_1.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/search.css">
   </head>
   <body class="article">
-<header class="header">
+<header class="header" role="banner">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="http://127.0.0.1:8080">Log Book</a>
+        <div class="navbar-item">
+          <input id="search-input" type="text" placeholder="Search docs">
+        </div>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -23,32 +27,15 @@
       <div class="navbar-end">
         <a class="navbar-item" href="#">Home</a>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Products</a>
+          <a class="navbar-link" href="/work_log/0.01/index.html">Worklog</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Product A</a>
-            <a class="navbar-item" href="#">Product B</a>
-            <a class="navbar-item" href="#">Product C</a>
-          </div>
-        </div>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Services</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Service A</a>
-            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="/sample/0.01/chapter_1.html">Sample</a>
+            <a class="navbar-item" href="/work_log/0.01/index.html">Worklog</a>
             <a class="navbar-item" href="#">Service C</a>
-          </div>
-        </div>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Resources</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Resource A</a>
-            <a class="navbar-item" href="#">Resource B</a>
-            <a class="navbar-item" href="#">Resource C</a>
           </div>
         </div>
         <div class="navbar-item">
           <span class="control">
-            <a class="button is-primary" href="#">Download</a>
           </span>
         </div>
       </div>
@@ -152,6 +139,12 @@
 <li>
 <p><a href="https://github.com/apache/camel-website" class="bare">https://github.com/apache/camel-website</a></p>
 </li>
+<li>
+<p><a href="https://docs.fauna.com/fauna/current/" class="bare">https://docs.fauna.com/fauna/current/</a></p>
+</li>
+<li>
+<p><a href="https://www.uyuni-project.org/uyuni-docs/uyuni/index.html" class="bare">https://www.uyuni-project.org/uyuni-docs/uyuni/index.html</a></p>
+</li>
 </ol>
 </div>
 </div>
@@ -239,13 +232,13 @@
 <div class="sect1">
 <h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
 <div class="sectionbody">
-<div class="ulist bibliography">
-<ul class="bibliography">
+<div class="ulist">
+<ul>
 <li>
-<p><a id="f"></a>[doc] <a href="https://docs.fedoraproject.org/en-US/docs/" class="bare">https://docs.fedoraproject.org/en-US/docs/</a></p>
+<p>[<a id="f"></a>] <a href="https://docs.fedoraproject.org/en-US/docs/" class="bare">https://docs.fedoraproject.org/en-US/docs/</a></p>
 </li>
 <li>
-<p><a id="f"></a>[source] <a href="https://pagure.io/fedora-docs/pages/tree/master">Fedora docs source</a></p>
+<p>[<a id="f"></a>] <a href="https://pagure.io/fedora-docs/pages/tree/master">Fedora docs source</a></p>
 </li>
 </ul>
 </div>
@@ -263,6 +256,9 @@
   <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/vendor/search.js" id="search-script" data-base-path="../.." data-page-path="/sample/0.01/chapter_1.html"></script>
+<script async src="../../_/../search-index.js"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
   </body>
 </html>

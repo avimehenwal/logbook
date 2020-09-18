@@ -1,4 +1,4 @@
-all: a build serve
+all: a clean build serve
 
 SHELL:=/bin/bash
 DIST:=docs
@@ -16,7 +16,9 @@ dev:
 
 build:
 	DOCSEARCH_ENABLED=true DOCSEARCH_ENGINE=lunr NODE_PATH="$(npm -g root)" \
-	antora --generator antora-site-generator-lunr --to-dir ${DIST} antora-playbook.yml
+	antora --generator antora-site-generator-lunr --to-dir ${DIST} \
+	--stacktrace antora-playbook.yml
+	touch ${DIST}/.nojekyll
 
 serve:
-	http-server ${DIST} -o
+	http-server ${DIST}

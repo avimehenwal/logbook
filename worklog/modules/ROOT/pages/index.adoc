@@ -6,7 +6,7 @@
 * link:setup[Setup]
 * link:ui[Default UI]
 
-[plantuml, svg]
+[plantuml]
 ....
 @startmindmap
 *[#Orange] Colors
