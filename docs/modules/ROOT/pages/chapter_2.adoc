@@ -1,0 +1,38 @@
+=== 2 Introduction to the Cambridge MQTT service 
+
+=== 2.1 Basic informations: 
+
+Projekt Cambridge zajmuje się speedcamami (Raporty na podstawie których tworzone są kamery)
+Cambridge Mqtt to popdrojekt który ma zadanie dostarczać w czasie rzeczywistym informacje o kamerach
+Cambridge Mqtt jest oparty o technologie MQTT oraz morton cody
+
+ 
+
+Ogólnie w 2 zdaniach co ma robić - tj samochody będa w stanie odbierać informacje o 
+
+ 
+=== 2.2 Mqtt 
+
+Czym jest mqtt – 2 zdania że to kolejka I że można sie subskrybować na dany topic aby odbierać informacje o tym co tam jest I o zmianach. 
+
+Odnośnik do oficjalnuych dokumentów 
+
+=== 2.3 Morton code 
+
+Czym są morton cody - dzielą świat na kwadraty w zależności od poziomu 
+
+Czym są jak działają, jakie biblioteki wykorzystujemy 
+
+=== 2.4 Morton code and mqtt topics 
+
+Wyjaśnienie że same morton cody były wykorzystane aby móc nadawać nazwy topicom itp. 
+
+(Topic naming strategyreference to how_mqtt_works and tile partitioningshort description of topic structure) 
+
+=== 2.5 Cambridge Camera 
+
+Informacje o przykładowej kamerze która jest wyciągnięta z gatewaya. 
+
+=== 2.6 Topic message 
+
+Informacje o tym jakie wartości z kamery zostały przekazane do wiadomości topica
