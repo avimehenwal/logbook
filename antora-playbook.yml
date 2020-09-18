@@ -3,7 +3,7 @@ site:
   # url: https://avimehenwal.github.io/logbook/
   url: http://127.0.0.1:8080/
   # start_page: work_log::index.adoc
-  start_page: sample::chapter_1.adoc
+  start_page: work_log::index.adoc
 
 content:
   sources:
@@ -36,10 +36,10 @@ ui:
 
 output:
   clean: true
-  dir: ./dist
+  dir: ./docs
   destinations:
   - provider: archive
-    path: ./dist/distzip.zip
+    path: ./docs/distzip.zip
 
 # site:
 #   title: Antora Docs

@@ -1,7 +1,7 @@
 all: a search serve
 
 SHELL:=/bin/bash
-DIST:=dist
+DIST:=docs
 
 a:
 	@echo "Using $$0"
