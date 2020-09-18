@@ -1,3 +1,7 @@
+:root {
+  --weight: 500;
+}
+
 .navbar-brand .navbar-item + .navbar-item {
   flex-grow: 1;
   justify-content: flex-end;
@@ -113,5 +117,22 @@
   background-color: rgba(69, 142, 225, 0.05);
 }
 
-/* green */
-/* color: #008000; */
+span.green {
+  color: green;
+  font-weight: var(--weight);
+}
+
+span.blue {
+  color: blue;
+  font-weight: var(--weight);
+}
+
+span.red {
+  color: red;
+  font-weight: var(--weight);
+}
+
+span.yellow {
+  color: orange;
+  font-weight: var(--weight);
+}

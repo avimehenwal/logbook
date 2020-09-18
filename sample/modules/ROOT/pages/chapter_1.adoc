@@ -3,8 +3,9 @@
 
 icon:tags[role="blue"] ruby, asciidoctor
 
-Zazwyczaj to co tu jest, a to co każdy zazwyczaj pomija [green]#Green text#
-
+Zazwyczaj to co tu jest, a to co każdy zazwyczaj pomija
+[green]#Green text# [red]#red text# [blue]#blue text# and [yellow]#some yellow# text
+*[green]#Green text#* _[red]#red text#_ [blue]#blue text# **and** *[yellow]#some yellow#* text
 
 == Who are using it?
 
