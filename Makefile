@@ -1,4 +1,4 @@
-all: a search serve
+all: a build serve
 
 SHELL:=/bin/bash
 DIST:=docs
@@ -9,11 +9,14 @@ a:
 clean:
 	rm -r ${DIST}
 
-build:
-	antora --stacktrace antora-playbook.yml
+dev:
+	antora --stacktrace --to-dir ${DIST} --title development \
+	--require asciidoctor-chart antora-playbook.yml
+	make serve
 
-search:
-	DOCSEARCH_ENABLED=true DOCSEARCH_ENGINE=lunr NODE_PATH="$(npm -g root)" antora --generator antora-site-generator-lunr antora-playbook.yml
+build:
+	DOCSEARCH_ENABLED=true DOCSEARCH_ENGINE=lunr NODE_PATH="$(npm -g root)" \
+	antora --generator antora-site-generator-lunr --to-dir ${DIST} antora-playbook.yml
 
 serve:
 	http-server ${DIST} -o
