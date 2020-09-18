@@ -26,6 +26,9 @@ kbd:[F11]
 . Build The Index
 . Perform a search
 
+== ToDo
+
+* [ ] Augogenerate nav.adoc
 
 == Features
 

@@ -1,4 +1,4 @@
-all: a build serve
+all: a search serve
 
 SHELL:=/bin/bash
 DIST:=dist

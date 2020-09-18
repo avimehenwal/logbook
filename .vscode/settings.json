@@ -19,6 +19,7 @@
     "vscode",
     "make",
     "antora",
-    "search"
+    "search",
+    "antora-ui"
   ]
 }

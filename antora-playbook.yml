@@ -1,7 +1,7 @@
 site:
   title: Log Book
   # url: https://avimehenwal.github.io/logbook/
-  url: https://localhost:8080
+  url: http://127.0.0.1:8080/
   # start_page: work_log::index.adoc
   start_page: sample::chapter_1.adoc
 
