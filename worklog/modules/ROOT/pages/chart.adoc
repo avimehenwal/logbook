@@ -1,10 +1,16 @@
-= Asciidoc-chrt
+= Chart Block Macro Extension
 
 IMPORTANT: unfortunately not working
 
 emoji:wink[]
 emoji:tada[42px]
 
+.Useful Links
+- https://github.com/Mogztter/asciidoctor-chart
+- https://github.com/decidim/documentation-antora-ui[ui with lunar searach]
+- https://docs.decidim.org/en/contribute/#whitepaper:index.adoc[sample ui]
+- https://github.com/apache/aries-antora-ui[aries-antora-ui]
+- https://github.com/Mogztter/antora-site-generator-lunr
 
 [chart,line]
 ....
@@ -13,9 +19,8 @@ January,February,March,April,May,June,July
 65,59,80,81,56,55,40
 ....
 
-// = Chart Block Macro Extension
 
-// chart::sample-data.csv[line,engine="chartjs"]
+// chart::sample-data.csv[line]
 
 // chart::sample-data.csv[bar,600,300,engine="chartist"]
 

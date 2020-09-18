@@ -12,5 +12,8 @@ clean:
 build:
 	antora --stacktrace antora-playbook.yml
 
+search:
+	DOCSEARCH_ENABLED=true DOCSEARCH_ENGINE=lunr NODE_PATH="$(npm -g root)" antora --generator antora-site-generator-lunr antora-playbook.yml
+
 serve:
 	http-server ${DIST} -o

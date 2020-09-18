@@ -4,3 +4,4 @@
 * link:example[Example]
 * link:chart[Chart]
 * link:setup[Setup]
+* link:ui[Default UI]
