@@ -176,15 +176,69 @@
 </div>
 <div class="openblock"><div class="ct-chart" data-chart-height="400" data-chart-width="600" data-chart-type="Line" data-chart-colors="#72B3CC,#8EB33B" data-chart-labels="January,February,March,April,May,June,July" data-chart-series-0="28,48,40,19,86,27,90" data-chart-series-1="65,59,80,81,56,55,40"></div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_data_attributes"><a class="anchor" href="#_data_attributes"></a>Data Attributes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">How to use data attributes</a></p>
+</div>
+<div class="paragraph">
+<p>Store extra information with HTML elements</p>
+</div>
+<div class="listingblock">
+<div class="title">How to data attributes are defined?</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="ct-chart"
+  data-chart-height="400"
+  data-chart-width="600"&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">How to access data-attributes?</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">element.dataset.chartHeight
+element.dataset.chartWidth</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_cases"><a class="anchor" href="#_use_cases"></a>Use Cases</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Show captions <code>onHover</code> on certain elements</p>
+</li>
+<li>
+<p>Hide/Show some list items</p>
+</li>
+<li>
+<p>Pass data to javascript libraries/modules to do something interesting, like generating chart</p>
+</li>
+</ol>
+</div>
 <div class="qlist qanda">
 <ol>
 <li>
 <p><em>How to access keys from <code>antora-playbook.yml</code> in partial templates?</em></p>
-<p>  <code>{{#with site.keys.googleAnalytics}}</code>
-Prebuilt <code>HTML</code> pages?
-  Put them inside <code>attachments</code> directory then add a link to them in <code>nav</code> file</p>
+<p><code>{{#with site.keys.googleAnalytics}}</code></p>
+</li>
+<li>
+<p><em>Prebuilt <code>HTML</code> pages?</em></p>
+<p>Put them inside <code>attachments</code> directory then add a link to them in <code>nav</code> file</p>
+</li>
+<li>
+<p><em>What are HTML Data Attributes?</em></p>
+<p>If you want to operate on elements based on data attributes, Eg: drawing charts etc</p>
 </li>
 </ol>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/TisD-O6esD4?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TisD-O6esD4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </div>
 </div>

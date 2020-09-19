@@ -1,9 +1,23 @@
-=== 3 Architecture
-High level Cambridge MQTT description
-AA
+= 3 Architecture
+:page-chart: true
 
+== High level Cambridge MQTT description
 
-=== 3.1 Client scenario 
+++++
+<div id="chartICVNSKTR"></div>
+<script>
+  c3.generate({
+    bindto: '#chartICVNSKTR',
+    size: { height: 400, width: 600 },
+    data: {
+      columns: [["Monday", "10"], ["Tuesday", "10"], ["Wednesday", "50"], ["Thursday", "25"]],
+      type: 'pie'
+    }
+  });
+</script>
+++++
+
+=== 3.1 Client scenario
 
 Ogólny diagram sekwencji na którym użytkownik:
 
@@ -13,7 +27,7 @@ Ogólny diagram sekwencji na którym użytkownik:
 * Odsubskrybowuje sie z kolejki
 
 
-=== 3.1.1 Authorization 
+=== 3.1.1 Authorization
 
 Bardziej szczegółowy opis I diagram jak wygląda autoryzacja.
 
@@ -29,7 +43,7 @@ Co taki dany oauth token może zawierać?
 @enduml
 ....
 
-=== 3.1.2 Subscription 
+=== 3.1.2 Subscription
 
 Użytkownik będąc zautoryzowany może zapisać się do kanału.
 
@@ -43,7 +57,7 @@ Użytkownik będąc zautoryzowany może zapisać się do kanału.
 ....
 
 
-=== 3.1.3 Receiving data 
+=== 3.1.3 Receiving data
 
 Jak wygladać będzie przykładowa wiadomość z topica
 
@@ -53,7 +67,7 @@ Jak wygladać będzie przykładowa wiadomość z topica
 "Mqtt broker " --> "Client ":Sends push messages\n regarding subscribed\ntopic
 ....
 
-=== 3.1.4 Unsubscription 
+=== 3.1.4 Unsubscription
 
 Podobne informacje co w przypadku subskrypcji. Tym razem odsubskrybuje sie
 
@@ -67,7 +81,7 @@ Podobne informacje co w przypadku subskrypcji. Tym razem odsubskrybuje sie
 ....
 
 
-=== 3.2 Application scenario 
+=== 3.2 Application scenario
 
 Ogólny diagram sekwencji na którym Aplikacja:
 

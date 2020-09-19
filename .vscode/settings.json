@@ -23,6 +23,7 @@
     "antora-ui",
     "ghpages",
     "ui",
-    "chart"
+    "chart",
+    "adoc"
   ]
 }
