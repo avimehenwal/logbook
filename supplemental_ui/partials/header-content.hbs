@@ -3,9 +3,9 @@
     <div class="navbar-brand">
       <a class="navbar-item" href="{{or site.url (or siteRootUrl siteRootPath)}}">{{site.title}}</a>
       {{#if env.DOCSEARCH_ENABLED}}
-        <div class="navbar-item">
-          <input id="search-input" type="text" placeholder="Search docs">
-        </div>
+      <div class="navbar-item">
+        <input id="search-input" type="text" placeholder="Search docs">
+      </div>
       {{/if}}
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -16,6 +16,17 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <a class="navbar-item" href="#">Home</a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Components</a>
+          <div class="navbar-dropdown">
+            {{ site.components }}
+            <a class="navbar-item" href="/sample/0.01/chapter_1.html">Sample</a>
+            <a class="navbar-item" href="/work_log/0.01/index.html">Worklog</a>
+
+          </div>
+        </div>
+
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link" href="/work_log/0.01/index.html">Worklog</a>
           <div class="navbar-dropdown">

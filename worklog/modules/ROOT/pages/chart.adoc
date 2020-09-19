@@ -1,19 +1,16 @@
-= Chart Block Macro Extension
-:docinfo: shared
+= Chart
+:page-chart: true
 
-== Chart docinfo
+=== asciidoctor-chart
 
-IMPORTANT: unfortunately not working
 
-emoji:wink[]
-emoji:tada[42px]
-
-.Useful Links
-- https://github.com/Mogztter/asciidoctor-chart
-- https://github.com/decidim/documentation-antora-ui[ui with lunar searach]
-- https://docs.decidim.org/en/contribute/#whitepaper:index.adoc[sample ui]
-- https://github.com/apache/aries-antora-ui[aries-antora-ui]
-- https://github.com/Mogztter/antora-site-generator-lunr
+[chart,pie]
+....
+Monday,10
+Tuesday,10
+Wednesday,50
+Thursday,25
+....
 
 [chart,line]
 ....
@@ -22,17 +19,17 @@ January,February,March,April,May,June,July
 65,59,80,81,56,55,40
 ....
 
-// chart::sample-data.csv[line]
+[chart,bar,height=500,width=900]
+....
+January,February,March,April,May,June,July
+28,48,40,19,86,27,90
+65,59,80,81,56,55,40
+....
 
-// chart::sample-data.csv[bar,600,300,engine="chartist"]
+emoji:sleepy[] doesnt work
 
-// chart::sample-data.csv[height=200,width=500]
-
-// chart::sample-data.csv[spline,500,400]
-
-// // Set axis labels (c3js only, see https://c3js.org/samples/axes_label.html)
-// chart::sample-data.csv[step, 500, 400, axis-x-label="X Label", axis-y-label="Y Label"]
-
-// // Set data names (c3js only, see https://c3js.org/samples/data_name.html)
-// chart::sample-data.csv[line, data-names="{'0':'Name 1', '1':'Name 2'}"]
-
+[chart,donut]
+....
+Monday, Tuesday
+20,30
+....

@@ -1,0 +1,3 @@
+[submodule "antora-site-generator-example-html-pages"]
+	path = antora-site-generator-example-html-pages
+	url = https://gitlab.com/opendevise/oss/antora-site-generator-example-html-pages.git

@@ -2,4 +2,6 @@
 * xref:index.adoc[Index]
 * xref:chart.adoc[Chart]
 * xref:ui.adoc[Default UI]
+* link:{attachmentsdir}/chart.html[prebuilt HTML]
+
 

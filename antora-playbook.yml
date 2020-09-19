@@ -1,38 +1,45 @@
 site:
   title: Log Book
-  # url: https://avimehenwal.github.io/logbook/
-  url: http://127.0.0.1:8080/
-  start_page: sample::chapter_4.adoc
+  url: https://avimehenwal.github.io/logbook/
+  # url: http://127.0.0.1:8080/
+  start_page: sample::chapter_5.adoc
   # start_page: work_log::index.adoc
+  robots: allow
+  keys:
+    google_analytics: GTM-XXXXXXXX
+
+git:
+  ensure_git_suffix: false
 
 content:
+  branches: HEAD
   sources:
   - url: .
-    branches: HEAD
     start_path: sample
   - url: .
-    branches: HEAD
     start_path: worklog
 
 asciidoc:
-  # javascript modules
+  attributes:
+    icons: font
+    kroki-fetch-diagram: true
+    # plantuml-server-url: 'http://www.plantuml.com/plantuml'
+    experimental: ''
+    # idprefix: '@'
+    # idseparator: '-@'
   extensions:
-    - asciidoctor-plantuml
+    # - asciidoctor-plantuml
     - asciidoctor-kroki
-    - asciidoctor-chart
     - asciidoctor-emoji
-    - asciidoctor-color
-    - asciidoctor-extension-interactive-runner
     - '@djencks/asciidoctor-mathjax'
     - '@deepsymmetry/asciidoctor-bytefield'
+    - asciidoctor-chart
+    # - ./extensions/chartist.js
     # FIXME needs twitter app ID and secret
     # - asciidoctor-tweet
-  attributes:
-    kroki-fetch-diagram: true
-    icons: font
-    plantuml-server-url: 'http://www.plantuml.com/plantuml'
-    experimental: ''
-
+    # FIXME not working
+    # - asciidoctor-color
+    # - asciidoctor-extension-interactive-runner
 
 ui:
   bundle:

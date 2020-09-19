@@ -1,5 +1,7 @@
 = Antora UI
+:page-chart: true
 
+Antora uses https://www.npmjs.com/package/vinyl[vinyl] virtual filesystem aka *content catalog*
 
 == Framework Variable
 
@@ -9,6 +11,15 @@ https://docs.antora.org/antora-ui-default/templates/[How to deal with antora han
 * `siteRootPath`
 * `uiRootPath`
 
+[chart,line]
+....
+January,February,March,April,May,June,July
+28,48,40,19,86,27,90
+65,59,80,81,56,55,40
+....
+
 [qanda]
 How to access keys from `antora-playbook.yml` in partial templates?::
   `{{#with site.keys.googleAnalytics}}`
+Prebuilt `HTML` pages?
+  Put them inside `attachments` directory then add a link to them in `nav` file

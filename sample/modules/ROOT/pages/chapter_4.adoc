@@ -34,6 +34,8 @@ like `pdf` and `zip` file for downloads
 
 link:{attachmentsdir}/chart.pdf[Download the PDF example] and read it.
 
+link:{attachmentsdir}/chart.html[view prebuilt HTML page]
+
 
 == Use bytefield
 

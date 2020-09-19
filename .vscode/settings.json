@@ -22,6 +22,7 @@
     "search",
     "antora-ui",
     "ghpages",
-    "ui"
+    "ui",
+    "chart"
   ]
 }

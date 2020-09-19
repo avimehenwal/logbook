@@ -16,7 +16,9 @@ dev:
 
 build:
 	DOCSEARCH_ENABLED=true DOCSEARCH_ENGINE=lunr NODE_PATH="$(npm -g root)" \
-	antora --generator antora-site-generator-lunr --to-dir ${DIST} \
+	antora --to-dir ${DIST} \
+	--generator=./antora-site-generator-example-html-pages \
+	--generator antora-site-generator-lunr \
 	--stacktrace antora-playbook.yml
 	touch ${DIST}/.nojekyll
 

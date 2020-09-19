@@ -19,6 +19,7 @@ icon:heart[size=2x]
 . https://docs.fauna.com/fauna/current/
 . https://www.uyuni-project.org/uyuni-docs/uyuni/index.html
 . https://github.com/couchbase/docs-ui
+. https://docs.couchbase.com/home/index.html
 
 NOTE: How to add `css` and `javascript` to individual pages?
 

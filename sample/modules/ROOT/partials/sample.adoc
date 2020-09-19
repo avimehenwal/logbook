@@ -1,4 +1,5 @@
 == Introduction
+:author: avi mehenwal
 
 An example of a basic http://asciidoc.org[AsciiDoc] document prepared by {author}.
 
