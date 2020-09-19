@@ -24,6 +24,7 @@
     "ghpages",
     "ui",
     "chart",
-    "adoc"
+    "adoc",
+    "bash"
   ]
 }

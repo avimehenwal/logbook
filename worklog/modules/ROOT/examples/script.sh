@@ -7,6 +7,14 @@
 #
 # Long problem description
 
+APT_DEPENDENCIES=(bash bats make)
+SNAP_DEPENDENCIES=(docker)
+
+# https://www.utf8-chartable.de/unicode-utf8-table.pl?start=9984&number=128&names=-&utf8=string-literal
+Y="\xe2\x9c\x97"
+X="\xE2\x9C\x94"
+F="\xe2\x9c\x88"
+
 function build {
   asciidoctor \
     --backend html5 \
@@ -49,6 +57,25 @@ EOT
     done
 }
 
+function apt_package_status {
+  PKG=$1
+  dpkg --status ${PKG} > /dev/null 2>&1
+  status=$(echo $?)
+  if  [ ${status} -ne 0 ]; then
+    printf "${Y}  ${PKG}  ${F}  installing ${PKG^^}...\n"
+    sudo apt install -y ${PKG}
+  else
+    printf "${X}  ${PKG}\n"
+  fi
+}
+
+function install_apt_dependencies {
+  for PACKAGE in "${APT_DEPENDENCIES[@]}"
+  do
+    apt_package_status ${PACKAGE}
+  done
+}
+
 # function epub {
   # https://github.com/asciidoctor/docker-asciidoctor
 # }
@@ -58,8 +85,8 @@ EOT
 # }
 
 # MAIN
-build
-index_gen
-
+# build
+# index_gen
+install_apt_dependencies
 
 # END
