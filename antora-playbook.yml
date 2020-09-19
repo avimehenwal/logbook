@@ -2,8 +2,8 @@ site:
   title: Log Book
   # url: https://avimehenwal.github.io/logbook/
   url: http://127.0.0.1:8080/
+  start_page: sample::chapter_4.adoc
   # start_page: work_log::index.adoc
-  start_page: work_log::index.adoc
 
 content:
   sources:
@@ -21,8 +21,17 @@ asciidoc:
     - asciidoctor-kroki
     - asciidoctor-chart
     - asciidoctor-emoji
+    - asciidoctor-color
+    - asciidoctor-extension-interactive-runner
+    - '@djencks/asciidoctor-mathjax'
+    # FIXME Error: No protocol method ICounted.-count defined for type object:
+    # <Asciidoctor::Extensions::Registry:0x44e>
+    # - bytefield-svg
+    # FIXME needs twitter app ID and secret
+    # - asciidoctor-tweet
   attributes:
     kroki-fetch-diagram: true
+    icons: font
     plantuml-server-url: 'http://www.plantuml.com/plantuml'
     experimental: ''
 
@@ -42,35 +51,8 @@ ui:
 output:
   clean: true
   dir: ./docs
-  destinations:
-  - provider: archive
-    path: ./docs/distzip.zip
-
-# site:
-#   title: Antora Docs
-#   url: https://docs.demo.com
-#   start_page: index.adoc
-#   robots: allow
-#   keys:
-#     google_analytics: XX-123456
-
-# content:
-#   sources:
-#   - url: ./modules
-#   - start_path: ROOT
-#   - branches: HEAD
-
-
-# ui:
-#   bundle:
-#     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
-#     snapshot: true
-
-# asciidoc:
-#   attributes:
-#     table-caption: ~
-#   extensions:
-#   # - asciidoctor-emoji-macro
-#   - asciidoctor-kroki
+  # destinations:
+  # - provider: archive
+  #   path: ./docs/distzip.zip
 
 # https://gitlab.com/antora/docs.antora.org/-/blob/master/antora-playbook.yml

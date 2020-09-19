@@ -1,0 +1,111 @@
+= Antora Content Management
+:icons: font
+:stem:
+
+## Tweet
+
+tweet::104136996043670323[]
+
+## emoji:pick[] LaTex
+
+> Using maths on web?
+
+. emoji:bomb[] Challenges with maths on web emoji:chains[]
+* characters and layouts convey meaning
+* screenreaders and *a11y*
+* images and text, looses semantic meaning
+* Multiple Languages implementations to solve this problem `TeX`, `LaTeX`, `MathML`
+
+TIP: Use [green]#MathTypes# text language then process it with MathJax.
+And then you can do something like https://mathjax.github.io/MathJax-demos-web/tex-chtml.html[this]
+
+
+[stem]
+++++
+x = {-b \pm \sqrt{b^2-4ac} \over 2a}.
+From A \rightarrow B
+++++
+
+Without stem
+
+++++
+x = {-b \pm \sqrt{b^2-4ac} \over 2a}.
+\rightarrow
+++++
+
+A matrix can be written as
+
+[stem]
+++++
+[[a,b],[c,d]]((n),(k))
+sqrt(4) = 2
+sqrt(9) = 3
+++++
+
+
+## Interactive
+
+[source%interactive,javascript]
+----
+const {camelCase} = require('lodash');
+console.log(camelCase('get content'));  <1>
+----
+<1> Now you can see the output of this line in the browser.
+
+## Content Organization
+
+color:#FF5733[]
+
+[%hardbreaks]
+`#fcf`
+`#00BCD4`
+`rgb(232, 74, 87)`
+`rgba(103,58,183,50%)`
+`hsl(88, 50%, 53%)`
+`hsla(36, 100%, 50%, 75%)`
+
+We should use the color color:blueviolet[] in our logo.
+
+.Antora Content Organization
+|===
+| Directory | Purpose
+| attachments | resource, such as the ZIP archive, pdf of a sample project, that a site visitor can download via a link
+|
+|===
+
+[stem]
+++++
+Extensions to asciidoc\tor.register()
+++++
+
+* Extensions are shared by all pages
+
+[How can I use asciidoc extensions in antora?](https://gitlab.com/antora/antora/-/issues/442)
+
+.Extensions
+* https://asciidoctor-docs.netlify.app/asciidoctor.js/extend/extensions/ecosystem/
+
+
+[plantuml,format=svg,role=sequence]
+....
+alice -> bob
+....
+
+[graphviz]
+....
+digraph foo {
+  node [style=rounded]
+  node1 [shape=box]
+  node2 [fillcolor=yellow, style="rounded,filled", shape=diamond]
+  node3 [shape=record, label="{ a | b | c }"]
+   node1 -> node2 -> node3
+}
+....
+
+
+WARNING: Features and issues
+
+* [ ] emoji:x[] Use LaTex?
+* [ ] emoji:wink[] Use bytefield-svg
+* [ ] emoji:x[] Interactive code-block?
+* [ ] emoji:x[] Color chips?

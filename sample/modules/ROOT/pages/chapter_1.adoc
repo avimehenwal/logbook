@@ -18,7 +18,12 @@ icon:heart[size=2x]
 . https://github.com/apache/camel-website
 . https://docs.fauna.com/fauna/current/
 . https://www.uyuni-project.org/uyuni-docs/uyuni/index.html
+. https://github.com/couchbase/docs-ui
 
+NOTE: How to add `css` and `javascript` to individual pages?
+
+* `docinfo` doenst seems to work with antoro, only works well with asciidoctor processor.
+* Have to look into `Trepprocessor` or conditionally add into handlebar templates
 
 == How are they using it?
 

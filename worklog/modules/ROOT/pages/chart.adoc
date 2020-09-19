@@ -1,4 +1,7 @@
 = Chart Block Macro Extension
+:docinfo: shared
+
+== Chart docinfo
 
 IMPORTANT: unfortunately not working
 
@@ -18,7 +21,6 @@ January,February,March,April,May,June,July
 28,48,40,19,86,27,90
 65,59,80,81,56,55,40
 ....
-
 
 // chart::sample-data.csv[line]
 

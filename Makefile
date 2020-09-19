@@ -7,7 +7,7 @@ a:
 	@echo "Using $$0"
 
 clean:
-	rm -r ${DIST}
+	rm -r ${DIST} || true
 
 dev:
 	antora --stacktrace --to-dir ${DIST} --title development \
