@@ -2,6 +2,70 @@
 :icons: font
 :stem:
 
+== Use Resources
+
+.Antora Content Organization
+|===
+| Directory | Purpose
+| attachments | resource, such as the ZIP archive, pdf of a sample project, that a site visitor can download via a link, using `link` macro
+| partials | reusable content snippets such as product descriptions and definitions, using `include` directive
+| images | using *image:name[]* macro
+| examples | source code file, using `include`
+|===
+
+=== Examples
+
+[source, edn]
+----
+include::example$edn4.edn[optional attributes]
+----
+
+=== partials
+
+include::partial$sample.adoc[]
+
+=== Images
+
+image::edn.svg[]
+
+=== Attachments
+
+like `pdf` and `zip` file for downloads
+
+link:{attachmentsdir}/chart.pdf[Download the PDF example] and read it.
+
+
+== Use bytefield
+
+.A byteframe
+[bytefield]
+----
+(draw-column-headers)
+(doseq [val (range 30)]
+  (draw-box val))
+----
+
+
+.A byte field
+[bytefield]
+----
+(draw-column-headers)
+(draw-box 42 {:fill "orange"})
+(draw-gap "Whee!" {:fill "yellow"})
+(draw-bottom {:fill "#a0ffa0"})
+----
+
+And some more text.
+
+[bytefield]
+----
+(draw-box 1)
+(draw-box "two" {:span 2})
+(draw-box nil {:fill "#a0ffa0"})
+(draw-box false {:fill "lightgrey"})
+----
+
+
 ## Tweet
 
 tweet::104136996043670323[]
@@ -66,12 +130,6 @@ color:#FF5733[]
 
 We should use the color color:blueviolet[] in our logo.
 
-.Antora Content Organization
-|===
-| Directory | Purpose
-| attachments | resource, such as the ZIP archive, pdf of a sample project, that a site visitor can download via a link
-|
-|===
 
 [stem]
 ++++
@@ -105,7 +163,15 @@ digraph foo {
 
 WARNING: Features and issues
 
-* [ ] emoji:x[] Use LaTex?
-* [ ] emoji:wink[] Use bytefield-svg
+* [ ] emoji:white_check_mark[] Use LaTex with MathJax
+* [ ] emoji:white_check_mark[] Use bytefield
 * [ ] emoji:x[] Interactive code-block?
 * [ ] emoji:x[] Color chips?
+
+== Issues
+
+=== emoji:beetle[] How to use asciidoc-charts?
+
+* https://gionkunz.github.io/chartist-js/
+
+Issue is to include chartist css and js on page `<  head>`

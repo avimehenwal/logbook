@@ -24,9 +24,7 @@ asciidoc:
     - asciidoctor-color
     - asciidoctor-extension-interactive-runner
     - '@djencks/asciidoctor-mathjax'
-    # FIXME Error: No protocol method ICounted.-count defined for type object:
-    # <Asciidoctor::Extensions::Registry:0x44e>
-    # - bytefield-svg
+    - '@deepsymmetry/asciidoctor-bytefield'
     # FIXME needs twitter app ID and secret
     # - asciidoctor-tweet
   attributes:

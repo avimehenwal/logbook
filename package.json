@@ -9,6 +9,7 @@
   "devDependencies": {
     "@antora/cli": "^2.3.4",
     "@antora/site-generator-default": "^2.3.4",
+    "@deepsymmetry/asciidoctor-bytefield": "^1.5.0",
     "@djencks/asciidoctor-mathjax": "^0.0.7",
     "asciidoctor-chart": "^0.3.0",
     "asciidoctor-emoji": "^0.2.2",

@@ -154,6 +154,13 @@
     asciidoctor-opal-runtime "0.3.0"
     unxhr "1.0.1"
 
+"@deepsymmetry/asciidoctor-bytefield@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@deepsymmetry/asciidoctor-bytefield/-/asciidoctor-bytefield-1.5.0.tgz#4473d08a9080944638a926863813ec8ea4fe210e"
+  integrity sha512-NBtIP3jgXuAfwXwxMHWRrPrqdAXGzDviqh9Fqzg0BevVj6Padjgz0fIKJec3V0KenvLs0Nrtiuesl4ocryKTBQ==
+  dependencies:
+    bytefield-svg "^1.5.0"
+
 "@djencks/asciidoctor-mathjax@^0.0.7":
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/@djencks/asciidoctor-mathjax/-/asciidoctor-mathjax-0.0.7.tgz#67bb2417a99a52f0a6eec861d75bae2d7ef48679"

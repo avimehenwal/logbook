@@ -1,0 +1,14 @@
+= Antora UI
+
+
+== Framework Variable
+
+https://docs.antora.org/antora-ui-default/templates/[How to deal with antora handlebar templates?]
+
+.Template Variables
+* `siteRootPath`
+* `uiRootPath`
+
+[qanda]
+How to access keys from `antora-playbook.yml` in partial templates?::
+  `{{#with site.keys.googleAnalytics}}`
