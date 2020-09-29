@@ -1,0 +1,45 @@
+= Storybook
+Firstname Lastname <author@asciidoctor.org>
+1.0, July 29, 2014, Asciidoctor 1.5 article template
+:title-page-background-image: image:component.svg[]
+
+== What and Why?
+
+* Develop UI components in isolation, irrespective of framework react, vue, angular, plain HTML
+* You can make stories for all the components in your app.
+
+.Main pros
+1. Accessability score
+2. Dynamically change props
+
+== Demo Project
+
+.development dependency
+[source, bash]
+----
+npx sb init
+----
+
+== Testing React components with storybook.js
+
+.Test driven development
+image:https://chromaticblog.ghost.io/content/images/max/800/1-BKWjjdtGyKwhlagGvZ2-_A.gif[TDD]
+
+Various Development processes
+
+1. TDD - Test  driven development
+2. BDD - Behaviour  driven development
+3. <<CDD>> - Componenet driven development, very popular in web
+4. SDD - Storybook driven development aka style guide driven development
+
+image:component.svg[component, 300,350]
+
+=== Testing
+
+. Structural Testing
+. Interaction Testing
+. Automated visual regression testing
+
+== References
+
+1. [[CDD]] https://www.slideshare.net/nikolaykozhuharenko/component-driven-development-how-to-guide[CDD slides]

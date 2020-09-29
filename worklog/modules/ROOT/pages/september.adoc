@@ -1,0 +1,54 @@
+= September 2020
+
+== Setting up CI pipeline for e2c webapp
+
+* [ ] Configure AWS named profile
+
+=== Bash
+
+* The semicolon is needed only when the end of line is missing:
+
+.Shell Scripting
+[source,bash]
+----
+if [ "a" == "a" ] ; then echo "true" ; fi
+----
+
+.Bash
+|===
+| Switch/option | Description
+| `-z` | True if the length of String is zero.
+| `$#` | Number of arguments passed to bash script
+| `$@` | Array of *all* arguments passed to script
+| `$?` | Exit status code, non-zero is bad
+|===
+
+https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html[bash test switches]
+
+.start coindex docker-base image
+[source,bash]
+----
+docker run --interactive --tty \
+ coindexbot/docker-images:latest-aws bash
+----
+
+.Software hosting service
+[graphviz, svg]
+....
+digraph D {
+  // layout=neato
+  bgcolor=transparent
+
+  node [fontsize=24, colorscheme=set312, style=filled]
+  edge [penwidth=1.5]
+
+  A [fillcolor=1, shape=box, label="docker Registry"]
+  B [fillcolor=2, label="dockerHub"]
+  C [fillcolor=3, label="github Package"]
+  D [fillcolor=4, label="aws"]
+
+  A -> B
+  A -> C
+  A -> D
+}
+....

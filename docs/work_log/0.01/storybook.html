@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Index File :: Log Book</title>
-    <link rel="canonical" href="https://avimehenwal.github.io/logbook/work_log/0.01/index.html">
+    <title>Storybook :: Log Book</title>
+    <link rel="canonical" href="https://avimehenwal.github.io/logbook/work_log/0.01/storybook.html">
     <meta name="generator" content="Antora 2.3.4">
 <link rel="stylesheet" href="../../_/css/site.css">
 
@@ -68,7 +68,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="example.html">Example</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Index</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -80,7 +80,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="september.html">September</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="storybook.html">Storybook</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -125,44 +125,108 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">My Work Log</a></li>
-    <li><a href="index.html">Index</a></li>
+    <li><a href="storybook.html">Storybook</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///home/avi/GIT/logbook/worklog/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="file:///home/avi/GIT/logbook/worklog/modules/ROOT/pages/storybook.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Index File</h1>
+<h1 class="page">Storybook</h1>
+<div class="sect1">
+<h2 id="_what_and_why"><a class="anchor" href="#_what_and_why"></a>What and Why?</h2>
+<div class="sectionbody">
 <div class="ulist">
-<div class="title">Pages</div>
 <ul>
 <li>
-<p><a href="example">Example</a></p>
+<p>Develop UI components in isolation, irrespective of framework react, vue, angular, plain HTML</p>
 </li>
 <li>
-<p><a href="chart">Chart</a></p>
-</li>
-<li>
-<p><a href="setup">Setup</a></p>
-</li>
-<li>
-<p><a href="ui">Default UI</a></p>
+<p>You can make stories for all the components in your app.</p>
 </li>
 </ul>
 </div>
-<div class="imageblock kroki">
+<div class="olist arabic">
+<div class="title">Main pros</div>
+<ol class="arabic">
+<li>
+<p>Accessability score</p>
+</li>
+<li>
+<p>Dynamically change props</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_demo_project"><a class="anchor" href="#_demo_project"></a>Demo Project</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="title">development dependency</div>
 <div class="content">
-<img src="_images/diag-8d37e546c84fd26f6a66e8572219527688d6c89f.svg" alt="Diagram">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npx sb init</code></pre>
 </div>
 </div>
-<div class="imageblock kroki">
-<div class="content">
-<img src="_images/diag-150343d42a2c8f014fd0a6b1dc137e71fe5f1d79.svg" alt="Diagram">
 </div>
 </div>
-<div class="imageblock kroki">
-<div class="content">
-<img src="_images/diag-085da379b6538df63360a33b0a663937d0345298.svg" alt="Diagram">
+<div class="sect1">
+<h2 id="_testing_react_components_with_storybook_js"><a class="anchor" href="#_testing_react_components_with_storybook_js"></a>Testing React components with storybook.js</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Test driven development</div>
+<p><span class="image"><img src="https://chromaticblog.ghost.io/content/images/max/800/1-BKWjjdtGyKwhlagGvZ2-_A.gif" alt="TDD"></span></p>
+</div>
+<div class="paragraph">
+<p>Various Development processes</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TDD - Test  driven development</p>
+</li>
+<li>
+<p>BDD - Behaviour  driven development</p>
+</li>
+<li>
+<p><a href="#CDD">[CDD]</a> - Componenet driven development, very popular in web</p>
+</li>
+<li>
+<p>SDD - Storybook driven development aka style guide driven development</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/component.svg" alt="component" width="300" height="350"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_testing"><a class="anchor" href="#_testing"></a>Testing</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Structural Testing</p>
+</li>
+<li>
+<p>Interaction Testing</p>
+</li>
+<li>
+<p>Automated visual regression testing</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a id="CDD"></a> <a href="https://www.slideshare.net/nikolaykozhuharenko/component-driven-development-how-to-guide">CDD slides</a></p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 </article>
@@ -227,7 +291,7 @@
 
 <script src="../../_/js/site.js"></script>
 <script src="../../_/js/vendor/lunr.js"></script>
-<script src="../../_/js/vendor/search.js" id="search-script" data-base-path="../.." data-page-path="/work_log/0.01/index.html"></script>
+<script src="../../_/js/vendor/search.js" id="search-script" data-base-path="../.." data-page-path="/work_log/0.01/storybook.html"></script>
 <script async src="../../_/../search-index.js"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
 

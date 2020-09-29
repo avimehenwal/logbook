@@ -2,6 +2,8 @@
 * xref:index.adoc[Index]
 * xref:chart.adoc[Chart]
 * xref:ui.adoc[Default UI]
+* xref:september.adoc[September]
+* xref:storybook.adoc[Storybook]
 * link:{attachmentsdir}/chart.html[prebuilt HTML]
 
 

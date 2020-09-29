@@ -25,6 +25,8 @@ asciidoc:
     kroki-fetch-diagram: true
     # plantuml-server-url: 'http://www.plantuml.com/plantuml'
     experimental: ''
+    author: avimehenwal
+    # toc: top
     # idprefix: '@'
     # idseparator: '-@'
   extensions:
