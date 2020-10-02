@@ -4,6 +4,7 @@
 * xref:ui.adoc[Default UI]
 * xref:september.adoc[September]
 * xref:storybook.adoc[Storybook]
+* xref:e2e-tests.adoc[e2e-tests]
 * link:{attachmentsdir}/chart.html[prebuilt HTML]
 
 

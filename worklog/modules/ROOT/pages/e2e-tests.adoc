@@ -1,0 +1,46 @@
+= End-to-end tests
+
+== Tracebility Matrix
+
+> It is used to track the requirements and to check the current project requirements are met.
+
+In software development, a traceability matrix (TM)[1]:244 is a document, usually in the form of a table, used to assist in determining the completeness of a relationship by correlating any two baselined documents using a many-to-many relationship comparison.[1]:3–22 It is often used with high-level requirements (these often consist of marketing requirements) and detailed requirements of the product to the matching parts of high-level design, detailed design, test plan, and test cases.
+
+== emoji:books[]  How google tests Softwares
+
+[quote]
+____
+[stem]
+++++
+Quality \ne Tests
+++++
+
+Quality is not equal to test.
+Quality is achieved by putting development and testing into a blender and mixing them
+until one is indistinguishable from the other.
+____
+
+== Topics
+
+* Types of tests and testing?
+* How to write test-cases and manage them?
+* How to automatically generate documentation from test-cases?
+* Test case Management System, FOSS
+** Testopia - Mozilla
+** https://sourceforge.net/projects/testlink/[TestLink]
+
+image::bug-report.jpg[]
+
+== Cypress
+
+* Wait for XHR requests and test assert on it
+
+image::test-pyramid.jpeg[]
+
+==== Extras
+
+* How to switch windows eficiently? using Palm technique
+
+== Bibliography
+
+* https://ptgmedia.pearsoncmg.com/images/9780321803023/samplepages/0321803027.pdf[how google tests softwares]
