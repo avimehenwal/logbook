@@ -1,0 +1,142 @@
+= Cypress
+
+.Why use this tool in the forst place? emoji:heavy_plus_sign[]
+. Test Asynchronous code
+. https://dashboard.cypress.io/projects/bvevpm/runs/3/test-results/54d75a41-a9ae-47c0-96bf-73f224ae92c0[Managed Dashboard] for test runs. https://www.cypress.io/pricing/[Free Tier: 500 recording/month]
+. https://docs.cypress.io/guides/guides/cross-browser-testing.html#Continuous-Integration-Strategies[Cross-browser Testing]
+. Time travel feature and snapshot for debugging
+. Do not use Web-driver (selenium) like protocol, cypress runs behind a node-server
+. Automatically waits for elements and content to appear
+. Simulate networks calls, like when servers are down, or server too slow, high latency
+
+Fixtures emoji:wrench[]::
+Fixtures are used as external pieces of static data that can be used by your tests.
+`cy.fixture()` yields the contents of the file. Formatting is determined by its file extension.
+
+Shadow DOM emoji:sunglasses[]::
+Shadow DOM is a new DOM feature that helps you build components. You can think of shadow DOM as a scoped sub-tree inside your element.
+
+== emoji:monkey[] History
+
+* [red]#NOT# based on selenium [blue]#web-driver#
+* started in *2014*
+* Written entirely in [green]#JavaScript#
+
+== emoji:family[] Use cases
+
+* [ ] Test URLs `cy.url().should('include', 'users')`
+* [ ] https://docs.cypress.io/guides/references/assertions.html#CSS[Test CSS] using `should('have.css')` assertion
+
+== emoji:passport_control[] Usage
+
+NOTE: `cy` commands en-queue an action to be taken later.
+
+* Install cypress from ENV_VAR
+* How to setup and teardowns `cy.exec()`,`cy.task()`,`cy.request()`
+
+TIP: DOM Element querying is like https://api.jquery.com/category/selectors/[JQUERY]
+
+* Cypress offers some guarantees on element interaction
+* Chain synchronous commands within scopes.
+* Cypress helps you test the entire life-cycle of Ajax / XHR requests within your application.
+* Cypress enables you to stub a response and control the body, status, headers, or even delay.
+** Stubbing network calls which returns images
+** wait for a network call to finish before proceeding with test
+* `/support/` file runs before every single spec file.
+* Commands are not retried when they could potentially change the state of the application under test. For example, Cypress will not retry the .click() command, because it could change something in the application.
+* Selector `.get().find()`
+* Insert breakpoints `cy.debug()`
+* To access what each Cypress command yields you use `.then()`
+* https://docs.cypress.io/plugins/index.html[List of cypress Plugins]
+* https://docs.cypress.io/guides/references/best-practices.html[Best Practices to write tests]
+* https://docs.cypress.io/api/api/table-of-contents.html[Cypress API]
+
+.Network calls intercepting support emoji:sound[]
+|===
+| XMLHttpRequest  | emoji:white_check_mark[]
+| Fetch API       | emoji:x[]
+|===
+
+image::test-organization.png[test-organization]
+
+NOTE: Everything is chain-able and returns Promise Object
+
+image::login-strategies.png[login-strategies]
+
+.cypress asynchronous methods emoji:vs[]
+|===
+| `cy.task()` | Run `node` commands
+| `cy.exec()` | Execute a system command
+| `cy.server()`   | Start a server to begin routing responses to `cy.route()`` and to change the behavior of network requests.
+| `cy.stub()` | Create stub object for mocking, followed by `cy.route()`
+| `cy.spy()`  | record calls to and arguments of the function wrapped on
+| `cy.invoke()`   | Invoke a function on the previously yielded subject
+| `cy.wrap()`   | Yield the object passed into .wrap(). If the object is a promise, yield its resolved value.
+| `cy.get('a').trigger('mouseleave')` | Trigger an event on a DOM element.
+| `cy.hash()`   | yields the current URL��s hash (including the # character)
+| `cy.request()` | Not bound by CORS or browser, unrestrained but uses browsers cookie-store, behaves as-if it did come from the browser
+|===
+
+== emoji:card_file_box[] Writing TC
+
+image::login-page-test.png[login-page-test]
+
+.Triple slash directive
+[source,javascript]
+----
+/// <reference path="..." /> <1>
+
+cy.get('footer').scrollIntoView() <2>
+----
+<1> TO enable vs-code intellisense
+<2> Scroll Element into view
+
+image::login-fixture.png[login-fixture]
+
+* [ ] How to test dynamic texts?
+* https://stackoverflow.com/questions/59341731/how-to-reuse-yielded-value-later-in-the-test[How to reuse yielded value?]
+* Test `click()` and `{enter}` behavior action
+* Screenshot diff testing
+
+image::guarded-routes.png[guarded-routes]
+
+== emoji:blue_book[] Best Practices
+
+CAUTION: Logging is one the first and hardest thing that you will do
+
+image::cypress-support.png[cypress-support]
+
+* [ ] Write effective tests in isolation
+* [ ] Free yourself from Page Objects Model POM, legacy patterns
+* [ ] Choose programmatic log-in strategy from your app
+* Anything not working on login page is absolutely disastrous
+* Display content matches the fetched data
+* Each spec is focused around individual page
+* Write fixtures to return static data in another tool
+* Create custom command called `cy.login()` in `support` directory
+** Cypress commands like macros
+* How authentication works? app extracts and saves token in local-storage from response
+* Similar to what `storybook.js` is doing. Mounting real components in DOM
+
+== emoji:om[] Resources
+
+* https://stackoverflow.com/questions/tagged/cypress
+* https://speakerdeck.com/brianmann/cypress-best-practices
+
+=== emoji:memo[] Related
+
+xref:e2e-tests.adoc[E2E tests]
+
+== emoji:movie_camera[] Youtube
+
+++++
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5XQOK0v_YRE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+++++
+
+++++
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5FnalKRjpZk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+++++
+
+++++
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lK_ihqnQQEM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+++++
