@@ -5,6 +5,9 @@
 * xref:september.adoc[September]
 * xref:storybook.adoc[Storybook]
 * xref:e2e-tests.adoc[e2e-tests]
+* xref:serverless.adoc[Serverless]
+* xref:b2c.adoc[b2c]
+* xref:cypress.adoc[Cypress]
 * link:{attachmentsdir}/chart.html[prebuilt HTML]
 
 

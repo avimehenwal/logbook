@@ -1,0 +1,12 @@
+= b2c webapp
+
+.How to deploy b2c app to dev env?
+[source,bash]
+----
+./scripts/install.sh && ./scripts/deploy.sh --debug true
+----
+
+
+== Todo
+
+* https://stackoverflow.com/questions/53898085/check-if-an-error-has-been-written-to-the-console[Cypress console errors]

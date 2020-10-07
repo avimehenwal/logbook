@@ -40,7 +40,15 @@ image::test-pyramid.jpeg[]
 ==== Extras
 
 * How to switch windows eficiently? using Palm technique
+* Cross brower testing
+*
 
 == Bibliography
 
 * https://ptgmedia.pearsoncmg.com/images/9780321803023/samplepages/0321803027.pdf[how google tests softwares]
+* https://github.com/cypress-io/cypress-realworld-app
+* https://github.com/cypress-io/cypress-example-kitchensink#ci-status
+
+=== emoji:memo[] Related
+
+xref:cypress.adoc[Cypress]

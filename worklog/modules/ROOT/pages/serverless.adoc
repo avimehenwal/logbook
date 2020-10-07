@@ -1,0 +1,37 @@
+= Serverless
+
+.install plugin/from github repo
+[source,bash]
+----
+serverless install \
+  --url https://github.com/serverless/examples/tree/master/aws-node-simple-http-endpoint \
+  --name aws-node-simple-http-endpoint
+
+serverless invoke local --function currentTime <1>
+serverless deploy
+serverless invoke --function currentTime --log
+----
+<1> Local lambda function invokation
+
+== Evolution of cloud computing
+
+.Timelive
+|===
+| Year | Technology
+| 1990's | Distributed computing via self managed datacentres
+| 1990   | Cluster and Grid computing
+| 2000 | Advent of virtual machines
+| 2008 | Amazon EC2, S3, SQS and *LXC*
+| 2013 | Docker Containers
+| 2014 | Amazon Lambda functions, *Serverless*
+|===
+
+== Serverless
+
+NOTE: *EC2* is *NOT* considered as serverless,
+because you pay as long as its active and not when your code is ececuted.
+
+.Advantages
+* Pay only on invokation
+* Auto-scaling
+* Packages security, monitoring and testing
