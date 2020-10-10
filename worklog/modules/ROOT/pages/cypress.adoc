@@ -120,6 +120,10 @@ image::cypress-support.png[cypress-support]
 * [ ] Write effective tests in isolation
 * [ ] Free yourself from Page Objects Model POM, legacy patterns
 * [ ] Choose programmatic log-in strategy from your app
+* [ ] Test applications using dialogues, including mobile webtesting
+* [ ] Play with network requests
+
+.Points
 * Anything not working on login page is absolutely disastrous
 * Display content matches the fetched data
 * Each spec is focused around individual page

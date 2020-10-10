@@ -12,7 +12,7 @@ serverless deploy
 serverless invoke --function currentTime --log
 ----
 <1> Local lambda function invokation
-
+\a'
 == Evolution of cloud computing
 
 .Timelive
@@ -35,3 +35,4 @@ because you pay as long as its active and not when your code is ececuted.
 * Pay only on invokation
 * Auto-scaling
 * Packages security, monitoring and testing
+

@@ -25,6 +25,7 @@
     "ui",
     "chart",
     "adoc",
-    "bash"
+    "bash",
+    "kroki"
   ]
 }
