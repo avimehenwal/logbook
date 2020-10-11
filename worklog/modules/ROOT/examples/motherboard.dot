@@ -1,0 +1,19 @@
+digraph G {
+  layout=neato
+  rankdir="LR";
+  bgcolor="transparent";
+
+  node[style=filled ,colorscheme=set38]
+  edge[len=2, penwidth=20, style=tapered, arrowhead=none, color=indigo]
+
+  mb [fillcolor=2, label="Motherboard", shape=circle, width=1, fontsize=19]
+  1 [fillcolor=5, label="CPU"]
+  2 [fillcolor=8, label="SSD Drive"]
+  3 [fillcolor=4, label="Network Card"]
+  4 [fillcolor=1, label="PCI Express"]
+  5 [fillcolor=6, label="RAM"]
+  6 [fillcolor=7, label="SMPS"]
+
+  mb -> { 1, 2, 3, 4, 5, 6 }
+
+}

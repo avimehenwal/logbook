@@ -37,7 +37,7 @@ image::bug-report.jpg[]
 
 image::test-pyramid.jpeg[]
 
-==== Extras
+=== Extras
 
 * How to switch windows eficiently? using Palm technique
 * Cross brower testing

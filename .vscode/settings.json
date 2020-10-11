@@ -26,6 +26,7 @@
     "chart",
     "adoc",
     "bash",
-    "kroki"
+    "kroki",
+    "diagrams"
   ]
 }

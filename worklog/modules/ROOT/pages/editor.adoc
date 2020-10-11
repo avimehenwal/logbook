@@ -1,0 +1,24 @@
+= Text Editor
+:te: https://en.wikipedia.org/wiki/Text_editor[Text Editors]
+:vim: https://en.wikipedia.org/wiki/Vim_(text_editor)[VIM, title="vi Modified"]
+:vsc: https://code.visualstudio.com/[vscode, title="visual studio code"]
+
+> 20 hrs of practising any {te} can save you potentially hundreds of editing hours.
+
+NOTE: As per stackoverflow survery, most popular text editors are.
+.most popular text editors
+|===
+| {vim} | for CLI
+| {vsc} | for GUI
+|===
+
+== VIM
+
+* Mode Editor
+* Everything through keyboard
+* https://www.vimgolf.com/[vim golf]
+
+[graphviz]
+....
+include::example$vim.dot[vim]
+....

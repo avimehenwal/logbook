@@ -1,0 +1,3 @@
+digraph g {
+  imgnode[image="so.png", label="stackoverflow"];
+}

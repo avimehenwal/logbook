@@ -1,0 +1,22 @@
+digraph G {
+  layout=neato
+  bgcolor="transparent";
+
+  node[style=filled ,colorscheme=set38]
+  edge[len=1.5, penwidth=10, style=tapered, arrowhead=none, color=indigo]
+
+  mb [fillcolor=2, width=1, height=1, fontsize=15, label="VIM modes"]
+  1 [fillcolor=5, label="normal"]
+  2 [fillcolor=8, label="replace"]
+  3 [fillcolor=4, label="visual"]
+  4 [fillcolor=1, label="execution"]
+  5 [fillcolor=6, label="insert"]
+  6 [fillcolor=7, label="line"]
+  7 [fillcolor=3, label="block"]
+  // 8 [fillcolor=7, label="SMPS"]
+
+  mb -> { 1, 2, 3, 4 }
+  mb -> 5 [color=brown, penwidth=18, label="i,s,a,r"]
+  3 -> { 6, 7 } [color=gray43]
+
+}

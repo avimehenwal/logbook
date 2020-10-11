@@ -1,0 +1,124 @@
+= CPU
+
+:ISA: https://en.wikipedia.org/wiki/Instruction_set_architecture[ISA, title="Instruction Set Architectures"]
+:IPC: pass:[<abbr title="Instructions per Clock">IPC</abbr>]
+:AMD: pass:[https://en.wikipedia.org/wiki/Advanced_Micro_Devices[AMD, title="Advanced Micro Devices"]]
+:PCI: https://en.wikipedia.org/wiki/PCI_Express[PCI, title="Peripheral Component Interconnect Express"]
+
+> The more the number of transistors, the more work can CPU do
+
+IMPORTANT: Monitor space weather, especially solar flares. 100 years ago there was one that fried all electronics on earth
+
+Every software/code you write for a CPU architecture is translated to its *Machine Code* aka {ISA}
+
+General norm is, *ARM* for mobile and *X86* for computers/desktops
+
+== Red vs Blue
+
+[red]#Red team# vs [blue]#Blue Team#
+
+== AMD
+
+https://www.amd.com/en/press-releases/2020-10-08-amd-launches-amd-ryzen-5000-series-desktop-processors-the-fastest-gaming[amd-launches-amd-ryzen-5000-series-desktop-processors-the-fastest-gaming]
+
+Flagship emoji:fire[] {AMD} Ryzen 5000 Series Desktop Processors
+
+.Ryzen naming
+|===
+| Ryzen 1 | Zen   | 14NM
+| Ryzen 2 | Zen+  | 12NM
+| Ryzen 3 | Zen 2 | 7NM
+| Ryzen 5 | Zen 3 | 7NM, complete redesign emoji:rocket[] November 5th
+|===
+
+=== History
+
+* Ryzen launched in 2017 with new *ZEN Microarchitecture*
+
+> How did AMD made their new processors faster?
+
+* Faster single core {IPC} -> better performance
+* Cache Latency, Doubled L3 cache size to *32MB*
+* Branch Prediction
+** If branch predictior makes a mistakes, entire instruction has to be purged and it might take upto *25* cycles to get the new instruction.
+** {AMD} uses Perceptron branch prediction https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1431573[Tagged geometric branch prediction]
+* All remaing at *105W*
+
+Clock speed of CPU?::
+  How quickly CPU can execute its basic operations.
+  Used to coordinate various parts of the various partss/modules of CPU.
+
+NOTE: Various Pipelining operations performed by CPU at each clock cycle
+
+.Pipeline Instructions
+1. Instruction Fetch
+2. Instruction Decode
+3. Instruction Execute
+4. Instruction Store
+
+=== Foce, work, power
+
+.Foce | work | power
+|===
+| Force | Newton | push / pull
+| Work, Energy  | Joules | Apply force over a distance
+| Power | Watt  | Rate at which work is done
+|===
+
+TIP: One Watt = One Joule per second
+
+[stem]
+++++
+1 W = 1 J/Sec
+++++
+
+
+== Intel
+
+image::intel-cpu-lineup.png[intel CPU product lineup]
+
+== PCI
+
+> What is {PCI} Express?
+
+Interface all adapter and peripheral ports on motherboard, notably graphics cards and solid state drives.
+
+.PCI History
+[options="header"]
+|===
+| Version | Release | data Transfer speed | Bandwidth
+| {PCI} 1 | 2003 | - | -
+| {PCI} 3 | 2015 | 8 GB/sec | 16 gbps
+| {PCI} 4 | 2020 | 16 GB/sec | 32 gbps
+|===
+
+== Motherboards
+
+* Glues various parts of a computer together
+* Specific to CPU architecture you will use.
+
+[graphviz]
+....
+include::example$motherboard.dot[Components of motherboard]
+....
+
+== Peripherals
+
+* https://www.amazon.de/SanDisk-Ultra-Dual-Flash-Laufwerk-Type-C/dp/B01EZ0X23W[Type C USB Pendrive]
+
+=== emoji:cyclone[] Resources
+
+==== What are *Chiplets* in CPU?
+++++
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NkknclAeUZ8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+++++
+
+==== How did AMD made ZEN 2 faster?
+++++
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-RT5sQZ-ckY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+++++
+
+==== How to choose a motherboard?
+++++
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cx8rS9_vNDo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+++++

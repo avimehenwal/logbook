@@ -1,0 +1,44 @@
+= GIT
+
+== Software Model
+
+* Version could be kept by having a directory of snapshots with timestamps
+* Git is fancier, it uses **DAG** Directed Acyclic Graph
+* Object are put into store as hashes
+  * turns big chunks of bytes to fixed length strings
+* Git comics
+* Hosting git versions of github, interacting with `remotes` objects
+
+.git Data Structures
+|===
+| Data Structures | Description
+| blob | Array of bytes
+| tree | Respresent a folder, mappings from dir name to contenet (another subtree or file)
+| commit | metadata, parent (array of commits), author, msg etc, snapshot (tree)
+| Object | blob | tree | commit
+| references | Mapping hashes to human redable string messages
+|===
+
+.Git commit log built using graphviz
+[graphviz]
+....
+include::example$git-graph.dot[]
+....
+
+.git Commands
+[source,bash]
+----
+git remote add <name|origin> <url> <1>
+git remote push origin <local-branch>:<remote-branch> <2>
+
+git add --patch <file> <3>
+----
+<1> Dealing with remotes
+<2> Pushing changes from local to remote
+<3> Interactively stage diff changes from a file
+
+=== Video Lecture
+
+++++
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2sjqTHE0zok" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+++++

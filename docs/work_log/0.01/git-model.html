@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Serverless :: Log Book</title>
-    <link rel="canonical" href="https://avimehenwal.github.io/logbook/work_log/0.01/serverless.html">
+    <title>GIT :: Log Book</title>
+    <link rel="canonical" href="https://avimehenwal.github.io/logbook/work_log/0.01/git-model.html">
     <meta name="generator" content="Antora 2.3.4">
 <link rel="stylesheet" href="../../_/css/site.css">
 
@@ -86,7 +86,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="e2e-tests.html">e2e-tests</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="serverless.html">Serverless</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -95,7 +95,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="cypress.html">Cypress</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="git-model.html">Git Model</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -149,106 +149,110 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">My Work Log</a></li>
-    <li><a href="serverless.html">Serverless</a></li>
+    <li><a href="git-model.html">Git Model</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///home/avi/GIT/logbook/worklog/modules/ROOT/pages/serverless.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="file:///home/avi/GIT/logbook/worklog/modules/ROOT/pages/git-model.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Serverless</h1>
-<div id="preamble">
+<h1 class="page">GIT</h1>
+<div class="sect1">
+<h2 id="_software_model"><a class="anchor" href="#_software_model"></a>Software Model</h2>
 <div class="sectionbody">
-<div class="listingblock">
-<div class="title">install plugin/from github repo</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">serverless install \
-  --url https://github.com/serverless/examples/tree/master/aws-node-simple-http-endpoint \
-  --name aws-node-simple-http-endpoint
-
-serverless invoke local --function currentTime <i class="conum" data-value="1"></i><b>(1)</b>
-serverless deploy
-serverless invoke --function currentTime --log</code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Local lambda function invokation
-\a'
-== Evolution of cloud computing</td>
-</tr>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Version could be kept by having a directory of snapshots with timestamps</p>
+</li>
+<li>
+<p>Git is fancier, it uses <strong>DAG</strong> Directed Acyclic Graph</p>
+</li>
+<li>
+<p>Object are put into store as hashes</p>
+</li>
+<li>
+<p>turns big chunks of bytes to fixed length strings</p>
+</li>
+<li>
+<p>Git comics</p>
+</li>
+<li>
+<p>Hosting git versions of github, interacting with <code>remotes</code> objects</p>
+</li>
+</ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Timelive</caption>
+<caption class="title">Table 1. git Data Structures</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Year</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Technology</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Structures</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1990&#8217;s</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Distributed computing via self managed datacentres</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">blob</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array of bytes</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1990</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster and Grid computing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tree</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Respresent a folder, mappings from dir name to contenet (another subtree or file)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Advent of virtual machines</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">metadata, parent (array of commits), author, msg etc, snapshot (tree)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2008</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Amazon EC2, S3, SQS and <strong>LXC</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">blob</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2013</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Docker Containers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tree</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commit</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2014</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Amazon Lambda functions, <strong>Serverless</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">references</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mapping hashes to human redable string messages</p></td>
 </tr>
 </tbody>
 </table>
+<div class="imageblock kroki">
+<div class="content">
+<img src="_images/diag-4c2113d423c73a27817850bf540ed049efdce0a3.svg" alt="Git commit log built using graphviz">
+</div>
+<div class="title">Figure 1. Git commit log built using graphviz</div>
+</div>
+<div class="listingblock">
+<div class="title">git Commands</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git remote add &lt;name|origin&gt; &lt;url&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+git remote push origin &lt;local-branch&gt;:&lt;remote-branch&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+
+git add --patch &lt;file&gt; <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_serverless"><a class="anchor" href="#_serverless"></a>Serverless</h2>
-<div class="sectionbody">
-<div class="admonitionblock note">
+<div class="colist arabic">
 <table>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<strong>EC2</strong> is <strong>NOT</strong> considered as serverless,
-because you pay as long as its active and not when your code is ececuted.
-</td>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Dealing with remotes</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Pushing changes from local to remote</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Interactively stage diff changes from a file</td>
 </tr>
 </table>
 </div>
-<div class="ulist">
-<div class="title">Advantages</div>
-<ul>
-<li>
-<p>Pay only on invokation</p>
-</li>
-<li>
-<p>Auto-scaling</p>
-</li>
-<li>
-<p>Packages security, monitoring and testing</p>
-</li>
-</ul>
+<div class="sect2">
+<h3 id="_video_lecture"><a class="anchor" href="#_video_lecture"></a>Video Lecture</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2sjqTHE0zok" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </div>
 </div>
@@ -314,7 +318,7 @@ because you pay as long as its active and not when your code is ececuted.
 
 <script src="../../_/js/site.js"></script>
 <script src="../../_/js/vendor/lunr.js"></script>
-<script src="../../_/js/vendor/search.js" id="search-script" data-base-path="../.." data-page-path="/work_log/0.01/serverless.html"></script>
+<script src="../../_/js/vendor/search.js" id="search-script" data-base-path="../.." data-page-path="/work_log/0.01/git-model.html"></script>
 <script async src="../../_/../search-index.js"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
 

@@ -1,0 +1,14 @@
+digraph G {
+	rankdir="LR";
+	bgcolor="transparent";
+
+	node[width=0.20, height=0.20, shape=point,fontsize=8.0,color=blue,fontcolor=black];
+	edge[arrowhead=none, penwidth=2, color=brown];
+
+  node[group=main];
+	1 -> 2 -> 3 -> 4 -> 5;
+	5[shape=box,label=master];
+	node[group=branch1];
+	2 -> 6 -> 7 -> 4;
+	7[shape=box,label=branch];
+}
