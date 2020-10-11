@@ -20,7 +20,7 @@ Quality is achieved by putting development and testing into a blender and mixing
 until one is indistinguishable from the other.
 ____
 
-== Topics
+== emoji:zzz[] Topics
 
 * Types of tests and testing?
 * How to write test-cases and manage them?
@@ -31,19 +31,26 @@ ____
 
 image::bug-report.jpg[]
 
-== Cypress
+== emoji:bear[] Cypress
 
 * Wait for XHR requests and test assert on it
 
 image::test-pyramid.jpeg[]
 
-=== Extras
+=== emoji:tada[] Extras
 
 * How to switch windows eficiently? using Palm technique
 * Cross brower testing
 *
 
-== Bibliography
+== emoji:nerd_face[]  Bibliography
+
+emoji:nerd_face[100px]
+emoji:camera[100px]
+emoji:scroll[100px]
+emoji:package[100px]
+emoji:key[100px]
+emoji:bed[100px]
 
 * https://ptgmedia.pearsoncmg.com/images/9780321803023/samplepages/0321803027.pdf[how google tests softwares]
 * https://github.com/cypress-io/cypress-realworld-app

@@ -1,0 +1,26 @@
+digraph G {
+  // layout=neato
+  // rankdir=LR
+  bgcolor="transparent"
+  label = "CI/CD pipeline"
+  node [colorscheme=set312, style=filled]
+  edge [len=1]
+
+  // node [width=6, shape=record]
+  // b [shape=record, label="{ 1 | 2 | 3 | 4 | 5 }"]
+  // a [shape=record, label="{ commit | push | build | test | report }"]
+
+  node [shape=rarrow]
+  a [fillcolor=1, shape=none, image="user.png"]
+
+  subgraph cluster_0 {
+		style=filled
+		color=lightgrey
+		node [color=white]
+
+    b [fillcolor=2, label="build"]
+    c [fillcolor=3, label="test"]
+    d [fillcolor=4, label="lint"]
+    e [fillcolor=5, label="artifacts"]
+	}
+}

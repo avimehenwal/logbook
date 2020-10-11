@@ -4,8 +4,11 @@
 [source,bash]
 ----
 ./scripts/install.sh && ./scripts/deploy.sh --debug true
+
+dot -Tpng record.dot -o ../images/record.png
 ----
 
+image::record.png[CI/CD Pipeline]
 
 == Todo
 
