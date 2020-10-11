@@ -91,7 +91,6 @@ public class Application {
 WARNING: Doesnt work
 https://gitlab.com/antora/antora/-/issues/522[Need asciidoctor.js version 2]
 
-
 == References
 
 - [[[f,doc]]] https://docs.fedoraproject.org/en-US/docs/

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Log Book</title>
+    <title>Architecture :: Log Book</title>
     <link rel="canonical" href="https://avimehenwal.github.io/logbook/sample/0.01/chapter_2.html">
     <meta name="generator" content="Antora 2.3.4">
 <link rel="stylesheet" href="../../_/css/site.css">
@@ -142,6 +142,98 @@
 </div>
   <div class="content">
 <article class="doc">
+<h1 class="page">Architecture</h1>
+<div class="sect1">
+<h2 id="_c4_diagramming_model"><a class="anchor" href="#_c4_diagramming_model"></a>C4 Diagramming Model</h2>
+<div class="sectionbody">
+<div class="imageblock kroki">
+<div class="content">
+<img src="_images/diag-e4afe76b06b4a7a589115fc0216b9802520281db.svg" alt="Diagram">
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>97 ways to sidestep UML</p>
+</div>
+</blockquote>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Just use a whiteboard</p>
+</div>
+</blockquote>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Google <a href="https://www.google.com/search?q=Software+architecture+diagrams">Software archotecture diagrams</a></p>
+</li>
+<li>
+<p>If we have 2 different maps, they will represent the same information, irrespective of different color coding, legends, language used etc.</p>
+</li>
+<li>
+<p>CONTAINER - individual unit</p>
+</li>
+<li>
+<p>Mobile App</p>
+</li>
+<li>
+<p>web app</p>
+</li>
+<li>
+<p>a script</p>
+</li>
+<li>
+<p>COMPONENTS - runs inside containers</p>
+</li>
+<li>
+<p>Structure - drill down into details</p>
+</li>
+<li>
+<p>Diagrams are Maps</p>
+</li>
+<li>
+<p>CONTEXT - Interaction between people and software system</p>
+</li>
+<li>
+<p>Containers, Component, Classes - interactions between various pieces of system</p>
+</li>
+<li>
+<p>Use single direcctional arrows only</p>
+</li>
+<li>
+<p>Read your diagrams outloud</p>
+</li>
+<li>
+<p>Different color codes for external and internal systems</p>
+</li>
+<li>
+<p>Solid lines for Synchronous calls</p>
+</li>
+<li>
+<p>Dashed lines for Asynchronous calls</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Make diagrams stand on their own</p>
+</div>
+</blockquote>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="_images/diag-1bd72ec5e5b2c40aac20f29c2997037aa5e2ef28.svg" alt="Diagram">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="_images/diag-dd96169d66695d2cd5e5f306c23696d42a7c734f.svg" alt="Diagram">
+</div>
+</div>
 <div class="sect2">
 <h3 id="_2_introduction_to_the_cambridge_mqtt_service"><a class="anchor" href="#_2_introduction_to_the_cambridge_mqtt_service"></a>2 Introduction to the Cambridge MQTT service</h3>
 
@@ -194,6 +286,135 @@ Cambridge Mqtt jest oparty o technologie MQTT oraz morton cody</p>
 <h3 id="_2_6_topic_message"><a class="anchor" href="#_2_6_topic_message"></a>2.6 Topic message</h3>
 <div class="paragraph">
 <p>Informacje o tym jakie wartości z kamery zostały przekazane do wiadomości topica</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aws_architecture_diagrams"><a class="anchor" href="#_aws_architecture_diagrams"></a>AWS Architecture Diagrams</h2>
+<div class="sectionbody">
+<div class="literalblock kroki-error">
+<div class="content">
+<pre>@startuml
+'AWS stuff here
+'================================
+!includeurl &lt;aws/common.puml&gt;
+!includeurl &lt;aws/SDKs/Java/Java.puml&gt;
+!includeurl &lt;aws/SDKs/Nodejs/Nodejs.puml&gt;
+
+!includeurl &lt;aws/General/users/users.puml&gt;
+!includeurl &lt;aws/General/client/client.puml&gt;
+!includeurl &lt;aws/General/AWScloud/AWScloud.puml&gt;
+!includeurl &lt;aws/General/mobileclient/mobileclient.puml&gt;
+
+!includeurl &lt;aws/Database/AmazonRDS/AmazonRDS.puml&gt;
+!includeurl &lt;aws/Database/AmazonRDS/DBinstance/DBinstance.puml&gt;
+!includeurl &lt;aws/Database/AmazonRDS/MySQLDBinstance/MySQLDBinstance.puml&gt;
+
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/AWSElasticBeanstalk.puml&gt;
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/deployment/deployment.puml&gt;
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/application/application.puml&gt;
+!includeurl &lt;aws/Compute/ElasticLoadBalancing/ApplicationLoadBalancer/ApplicationLoadBalancer.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/AWSLambda.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/LambdaFunction/LambdaFunction.puml&gt;
+
+!includeurl &lt;aws/Storage/AmazonS3/AmazonS3.puml&gt;
+!includeurl &lt;aws/Storage/AmazonS3/bucket/bucket.puml&gt;
+!includeurl &lt;aws/Storage/AmazonGlacier/AmazonGlacier.puml&gt;
+!includeurl &lt;aws/Storage/AmazonGlacier/archive/archive.puml&gt;
+
+!includeurl &lt;aws/SecurityIdentityCompliance/AWSIAM/AWSIAM.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/IAM/permissions/permissions.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/IAM/role/role.puml&gt;
+
+!includeurl &lt;aws/MobileServices/AmazonCognito/AmazonCognito.puml&gt;
+!includeurl &lt;aws/NetworkingContentDelivery/AmazonRoute53/AmazonRoute53.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/AWSIAM/AWSIAM.puml&gt;
+
+!includeurl &lt;aws/Analytics/AmazonES/AmazonES.puml&gt;
+!includeurl &lt;aws/ManagementTools/AmazonCloudWatch/AmazonCloudWatch.puml&gt;
+
+'Elastic stuff here
+'================================
+!define ELASTIC_PUML elastic
+!include &lt;elastic/apm/apm.puml&gt;
+!include &lt;elastic/app_search/app_search.puml&gt;
+!include &lt;elastic/beats/beats.puml&gt;
+!include &lt;elastic/cloud/cloud.puml&gt;
+!include &lt;elastic/cloud_in_kubernetes/cloud_in_kubernetes.puml&gt;
+!include &lt;elastic/code_search/code_search.puml&gt;
+!include &lt;elastic/ece/ece.puml&gt;
+!include &lt;elastic/eck/eck.puml&gt;
+!include &lt;elastic/elasticsearch/elasticsearch.puml&gt;
+!include &lt;elastic/endpoint/endpoint.puml&gt;
+!include &lt;elastic/enterprise_search/enterprise_search.puml&gt;
+!include &lt;elastic/kibana/kibana.puml&gt;
+!include &lt;elastic/logging/logging.puml&gt;
+!include &lt;elastic/logstash/logstash.puml&gt;
+!include &lt;elastic/maps/maps.puml&gt;
+!include &lt;elastic/metrics/metrics.puml&gt;
+!include &lt;elastic/siem/siem.puml&gt;
+!include &lt;elastic/site_search/site_search.puml&gt;
+!include &lt;elastic/stack/stack.puml&gt;
+!include &lt;elastic/uptime/uptime.puml&gt;
+
+
+
+'change color of selected background shape https://plantuml.com/deployment-diagram
+skinparam actorBackgroundColor White
+skinparam agentBackgroundColor White
+skinparam artifactBackgroundColor White
+skinparam boundaryBackgroundColor White
+skinparam cardBackgroundColor White
+skinparam cloudBackgroundColor White
+skinparam componentBackgroundColor White
+skinparam controlBackgroundColor White
+skinparam databaseBackgroundColor White
+skinparam entityBackgroundColor White
+skinparam fileBackgroundColor White
+skinparam folderBackgroundColor White
+skinparam frameBackgroundColor White
+skinparam interfaceBackgroundColor White
+skinparam nodeBackgroundColor White
+skinparam packageBackgroundColor White
+skinparam queueBackgroundColor White
+skinparam stackBackgroundColor White
+skinparam rectangleBackgroundColor White
+skinparam storageBackgroundColor White
+skinparam usecaseBackgroundColor White
+
+
+
+'To change background color to elastic green
+'skinparam componentBackgroundColor 00BFB3
+
+AWSCLOUD(aws) {
+
+    AMAZONS3(s3_bucket,"Logs uploaded to here")
+
+package Elastic {
+
+    'add "node", "component", "agent" etc... to change background shape per https://plantuml.com/deployment-diagram
+    'default is agent
+    ELASTICSEARCH(ElasticSearch, "Search and Analyze",database)
+    LOGSTASH(Logstash, "Parse and Transform",node)
+    KIBANA(Kibana, "Visualize",agent)
+}
+
+    s3_bucket -down-&gt; Logstash: Raw logs
+    Logstash -right-&gt; ElasticSearch: Transformed Data
+    ElasticSearch -right-&gt; Kibana: Data to View
+
+}
+footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s Guide to PlantUML
+@enduml</pre>
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="_images/diag-3e9d271c00d5d08588000ca02c4b2cd7197f07d2.svg" alt="Diagram">
+</div>
+</div>
 </div>
 </div>
 </article>
