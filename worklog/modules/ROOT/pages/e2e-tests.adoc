@@ -1,4 +1,5 @@
 = End-to-end tests
+:TTFB: pass:[The <abbr title="Time To First Byte">TTFB</abbr>]
 
 == Tracebility Matrix
 
@@ -55,6 +56,61 @@ emoji:bed[100px]
 * https://ptgmedia.pearsoncmg.com/images/9780321803023/samplepages/0321803027.pdf[how google tests softwares]
 * https://github.com/cypress-io/cypress-realworld-app
 * https://github.com/cypress-io/cypress-example-kitchensink#ci-status
+
+== Patterns
+
+* https://stackoverflow.com/questions/62179859/cypress-aws-cognito-intergrations[cypress aws congnito integration]
+* How to save multiple network requests to disk from chrome devtools https://developers.google.com/web/tools/chrome-devtools/network[network]?
+
+=== devtools Network
+
+TIP: checks when a resource was uploaded/downloaded from internet/network
+
+Web link:https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies[Cookies]?::
+Reliable way to store stateful information about a website on browser.
+
+image::http-cookies.png[HTTP web cookie]
+
+* Analyze each individual network call including {TTFB}, headers, respose, http code etc.
+* How does a URL sets a cookie in browser?
+* Asciidoc - to add links to in headings use `link:` macro
+* To Annotate images use `Krita` and to crop/resize `ShotWell` or `gThumb`
+
+.Difference between `XHR` and `fetch` API
+. Fetch uses `Promises` avoiding callback hell.
+. You can use the https://developer.mozilla.org/en-US/docs/Web/API/Cache[Cache API] with the request and response objects
+. You can perform no-cors requests, getting a response from a server that doesn't implement CORS. You can't access the response body directly from JavaScript, but you can use it with other APIs (e.g. the Cache API)
+. Streaming responses (with XHR the entire response is *buffered in memory*, with fetch you will be able to access the low-level stream). This isn't available yet in all browsers, but will be soon.
+
+[source,javascript]
+----
+let reqHeader = new Headers(); <5>
+reqHeader.append('Content-Type', 'text/json');
+let requestObject = {
+    method: 'GET', headers: reqHeader,
+};
+
+fetch('https://api.github.com/users/avimehenwal', requestObject) <4>
+.then(function (response) { <1>
+    return response.json();
+})
+.then(function (data) { <2>
+    console.log(data);
+})
+.catch(function (err) { <3>
+    console.log("Something went wrong!", err);
+});
+----
+<1> Resolve request promise
+<2> `respose.json()` yields another promise
+<3> Catch if Promise is not resolved
+<4> Add request parameters to special kind of request
+<5> Add request Headers
+
+What is the difference between link:https://github.com/aws-amplify/amplify-js/issues/1120[Amplify and Cognito]?::
+Recently they've been bundling all their SDKs into Amplify to streamline the integration process.
+
+
 
 === emoji:memo[] Related
 

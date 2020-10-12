@@ -12,6 +12,7 @@
 * xref:networking.adoc[Networking]
 * xref:cpu.adoc[CPU]
 * xref:editor.adoc[Text Editor]
+* xref:aws.adoc[AWS]
 * link:{attachmentsdir}/chart.html[prebuilt HTML]
 
 

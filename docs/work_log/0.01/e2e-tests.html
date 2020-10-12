@@ -108,6 +108,9 @@
     <a class="nav-link" href="editor.html">Text Editor</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aws.html">AWS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="_attachments/chart.html">prebuilt HTML</a>
   </li>
 </ul>
@@ -281,6 +284,134 @@ until one is indistinguishable from the other.</p>
 <p><a href="https://github.com/cypress-io/cypress-example-kitchensink#ci-status" class="bare">https://github.com/cypress-io/cypress-example-kitchensink#ci-status</a></p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_patterns"><a class="anchor" href="#_patterns"></a>Patterns</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://stackoverflow.com/questions/62179859/cypress-aws-cognito-intergrations">cypress aws congnito integration</a></p>
+</li>
+<li>
+<p>How to save multiple network requests to disk from chrome devtools <a href="https://developers.google.com/web/tools/chrome-devtools/network">network</a>?</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_devtools_network"><a class="anchor" href="#_devtools_network"></a>devtools Network</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+checks when a resource was uploaded/downloaded from internet/network
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Web <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">Cookies</a>?</dt>
+<dd>
+<p>Reliable way to store stateful information about a website on browser.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/http-cookies.png" alt="HTTP web cookie">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Analyze each individual network call including The <abbr title="Time To First Byte">TTFB</abbr>, headers, respose, http code etc.</p>
+</li>
+<li>
+<p>How does a URL sets a cookie in browser?</p>
+</li>
+<li>
+<p>Asciidoc - to add links to in headings use <code>link:</code> macro</p>
+</li>
+<li>
+<p>To Annotate images use <code>Krita</code> and to crop/resize <code>ShotWell</code> or <code>gThumb</code></p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Difference between <code>XHR</code> and <code>fetch</code> API</div>
+<ol class="arabic">
+<li>
+<p>Fetch uses <code>Promises</code> avoiding callback hell.</p>
+</li>
+<li>
+<p>You can use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache API</a> with the request and response objects</p>
+</li>
+<li>
+<p>You can perform no-cors requests, getting a response from a server that doesn&#8217;t implement CORS. You can&#8217;t access the response body directly from JavaScript, but you can use it with other APIs (e.g. the Cache API)</p>
+</li>
+<li>
+<p>Streaming responses (with XHR the entire response is <strong>buffered in memory</strong>, with fetch you will be able to access the low-level stream). This isn&#8217;t available yet in all browsers, but will be soon.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let reqHeader = new Headers(); <i class="conum" data-value="5"></i><b>(5)</b>
+reqHeader.append('Content-Type', 'text/json');
+let requestObject = {
+    method: 'GET', headers: reqHeader,
+};
+
+fetch('https://api.github.com/users/avimehenwal', requestObject) <i class="conum" data-value="4"></i><b>(4)</b>
+.then(function (response) { <i class="conum" data-value="1"></i><b>(1)</b>
+    return response.json();
+})
+.then(function (data) { <i class="conum" data-value="2"></i><b>(2)</b>
+    console.log(data);
+})
+.catch(function (err) { <i class="conum" data-value="3"></i><b>(3)</b>
+    console.log("Something went wrong!", err);
+});</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Resolve request promise</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>respose.json()</code> yields another promise</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Catch if Promise is not resolved</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Add request parameters to special kind of request</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Add request Headers
+<div class="dlist">
+<dl>
+<dt class="hdlist1">What is the difference between <a href="https://github.com/aws-amplify/amplify-js/issues/1120">Amplify and Cognito</a>?</dt>
+<dd>
+<p>Recently they&#8217;ve been bundling all their SDKs into Amplify to streamline the integration process.</p>
+</dd>
+</dl>
+</div></td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_related"><a class="anchor" href="#_related"></a><img class="emoji" draggable="false" height="24px" width="24px" src="https://twemoji.maxcdn.com/2/svg/1f4dd.svg" /> Related</h3>

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>GIT :: Log Book</title>
-    <link rel="canonical" href="https://avimehenwal.github.io/logbook/work_log/0.01/git-model.html">
+    <title>AWS :: Log Book</title>
+    <link rel="canonical" href="https://avimehenwal.github.io/logbook/work_log/0.01/aws.html">
     <meta name="generator" content="Antora 2.3.4">
 <link rel="stylesheet" href="../../_/css/site.css">
 
@@ -95,7 +95,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="cypress.html">Cypress</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="git-model.html">Git Model</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -107,7 +107,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="editor.html">Text Editor</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="aws.html">AWS</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -152,110 +152,63 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">My Work Log</a></li>
-    <li><a href="git-model.html">Git Model</a></li>
+    <li><a href="aws.html">AWS</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///home/avi/GIT/logbook/worklog/modules/ROOT/pages/git-model.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="file:///home/avi/GIT/logbook/worklog/modules/ROOT/pages/aws.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">GIT</h1>
-<div class="sect1">
-<h2 id="_software_model"><a class="anchor" href="#_software_model"></a>Software Model</h2>
+<h1 class="page">AWS</h1>
+<div id="preamble">
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Version could be kept by having a directory of snapshots with timestamps</p>
-</li>
-<li>
-<p>Git is fancier, it uses <strong>DAG</strong> Directed Acyclic Graph</p>
-</li>
-<li>
-<p>Object are put into store as hashes</p>
-</li>
-<li>
-<p>turns big chunks of bytes to fixed length strings</p>
-</li>
-<li>
-<p>Git comics</p>
-</li>
-<li>
-<p>Hosting git versions of github, interacting with <code>remotes</code> objects</p>
-</li>
-</ul>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Amazon Cognito provides authentication, authorization, and user management for your web and mobile apps</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. git Data Structures</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data Structures</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">blob</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Array of bytes</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tree</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Respresent a folder, mappings from dir name to contenet (another subtree or file)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">commit</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">metadata, parent (array of commits), author, msg etc, snapshot (tree)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">blob</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tree</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">commit</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">references</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mapping hashes to human redable string messages</p></td>
-</tr>
-</tbody>
-</table>
-<div class="imageblock kroki">
-<div class="content">
-<img src="_images/diag-4c2113d423c73a27817850bf540ed049efdce0a3.svg" alt="Git commit log built using graphviz">
+</blockquote>
 </div>
-<div class="title">Figure 1. Git commit log built using graphviz</div>
-</div>
-<div class="listingblock">
-<div class="title">git Commands</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git remote add &lt;name|origin&gt; &lt;url&gt; <i class="conum" data-value="1"></i><b>(1)</b>
-git remote push origin &lt;local-branch&gt;:&lt;remote-branch&gt; <i class="conum" data-value="2"></i><b>(2)</b>
-
-git add --patch &lt;file&gt; <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+<div class="paragraph">
+<p>Based on OAuth Endpoint</p>
 </div>
 </div>
-<div class="colist arabic">
+</div>
+<div class="sect1">
+<h2 id="_cognito"><a class="anchor" href="#_cognito"></a>Cognito</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Managed Authentication Service.</p>
+</div>
+<div class="admonitionblock note">
 <table>
 <tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Dealing with remotes</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Pushing changes from local to remote</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>Interactively stage diff changes from a file</td>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A user pool is a user directory in Amazon Cognito
+</td>
 </tr>
 </table>
 </div>
-<div class="sect2">
-<h3 id="_video_lecture"><a class="anchor" href="#_video_lecture"></a>Video Lecture</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2sjqTHE0zok" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="paragraph">
+<p>After successfully authenticating a user, Amazon Cognito issues <strong>JSON web tokens</strong> <abbr title="Javascript Web Token">JWT</abbr> that you can use to secure and authorize access to your own APIs, or exchange for AWS credentials.</p>
+</div>
+<div class="paragraph">
+<p>Amazon Cognito offers user pools and identity pools.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">User pools</dt>
+<dd>
+<p>are user directories that provide sign-up and sign-in options for your app users.</p>
+</dd>
+<dt class="hdlist1">Identity pools</dt>
+<dd>
+<p>provide AWS credentials to grant your users access to other AWS services.</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
@@ -321,7 +274,7 @@ git add --patch &lt;file&gt; <i class="conum" data-value="3"></i><b>(3)</b></cod
 
 <script src="../../_/js/site.js"></script>
 <script src="../../_/js/vendor/lunr.js"></script>
-<script src="../../_/js/vendor/search.js" id="search-script" data-base-path="../.." data-page-path="/work_log/0.01/git-model.html"></script>
+<script src="../../_/js/vendor/search.js" id="search-script" data-base-path="../.." data-page-path="/work_log/0.01/aws.html"></script>
 <script async src="../../_/../search-index.js"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
 
