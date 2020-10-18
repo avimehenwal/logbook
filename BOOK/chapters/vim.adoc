@@ -1,0 +1,55 @@
+= VIM
+:icons: font
+:experimental:
+
+== Emacs
+
+> Its a development environment
+
+* Features a Turing complete programming language
+
+[source, vim]
+....
+:browser oldfiles
+....
+
+== How to create a vim Plugin?
+
+> Everyone uses VIM differently
+
+[source, bash]
+....
+plugins/{plugin}.vim
+autoload/... <2>
+....
+<2> Autoloading functions are automatically sourced by vim
+
+.types of plugins
+. Synchronous
+. Asynchronous
+
+.steps involved
+. Function calls an external program
+. Waits until external program returns
+. Present the output in a new buffer window
+
+TIP: vim can use `vimscript`, `nodejs` and `python` runners
+
+== Completions
+
+=== kbd:[Ctrl + x] Completions
+
+|===
+| Text Completion | kbd:[ctrl + x + p/n]
+| File name Completion | kbd:[ctrl + x/f]
+| Dictionaryi/ Thesaures Completion | kbd:[ctrl + x + ctrl + k]
+
+|===
+
+== Setup vim like vscode
+
+
+
+== References
+
+* https://vimconf.org/2018/slides/Effective_Modern_Vim_scripting_at_vimconf2018_for_PDF.pdf[dark vimmer, pdf]

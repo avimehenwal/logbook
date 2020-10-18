@@ -146,9 +146,18 @@
 <div class="sect1">
 <h2 id="_c4_diagramming_model"><a class="anchor" href="#_c4_diagramming_model"></a>C4 Diagramming Model</h2>
 <div class="sectionbody">
-<div class="imageblock kroki">
+<div class="literalblock kroki-error">
 <div class="content">
-<img src="_images/diag-e4afe76b06b4a7a589115fc0216b9802520281db.svg" alt="Diagram">
+<pre>graph LR
+A(Context):::blue
+B(Container):::orange
+C(Components):::purple
+D(Code/Classes):::yellow
+A --&gt; B --&gt; C --&gt; D
+classDef orange fill:#f96,stroke-width:0px;
+classDef yellow fill:#FFE873,stroke-width:0px;
+classDef blue fill:#b8d4ff,stroke-width:0px;
+classDef purple fill:#f9f,stroke:#333,stroke-width:0px;</pre>
 </div>
 </div>
 <div class="quoteblock">

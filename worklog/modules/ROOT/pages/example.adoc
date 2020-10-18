@@ -142,6 +142,9 @@ Cloud Providers::
 
 video::rPQoq7ThGAU[youtube]
 
+LivePatch feature on ubuntu::
+Install kernel updates without restarting the system.
+
 [source,ruby]
 ----
 require 'sinatra' // <1>

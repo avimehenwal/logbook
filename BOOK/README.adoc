@@ -1,0 +1,112 @@
+= ManPages
+:icons: font
+
+
+== Installation
+
+.Use asciidoctor from ruby gem
+[source,bash]
+----
+The file '/home/avi/.gem/bin/asciidoctor' specified the interpreter '/snap/bin/ruby', which is not an executable command.
+----
+
+CAUTION: Do *not* use ruby from snap
+
+.installation
+[source,bash]
+----
+gem install asciidoctor
+gem install asciidoctor-chart
+gem install asciidoctor-diagram
+gem install asciidoctor-mathematical
+----
+
+TIP: Use `gem` to install asciidoctor. Although prefer docker
+
+== Equations in normal blocks
+
+[latexmath]
+++++
+k_{n+1} = n^2 + k_n^2 - k_{n-1}
+++++
+
+Some useful text! Formula for quadratic root:
+
+STEM icon:heart[size=2x]
+
+icon:tags[] ruby, asciidoctor
+
+
+[stem]
+++++
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+++++
+
+icon:shield[rotate=90, flip=vertical]
+
+[stem]
+++++
+sqrt(4) = 2
+++++
+
+[plantuml, classdiagram, svg]
+....
+class BlockProcessor
+class DiagramBlock
+class DitaaBlock
+class PlantUmlBlock
+
+BlockProcessor <|-- DiagramBlock
+DiagramBlock <|-- DitaaBlock
+DiagramBlock <|-- PlantUmlBlock
+....
+
+[graphviz, digraph, svg]
+....
+digraph D {
+
+  A -> {B, C, D} -> {F}
+
+}
+....
+
+
+[graphviz, table, svg]
+....
+digraph D {
+
+  label = <The <font color='red'><b>foo</b></font>,<br/> the <font point-size='20'>bar</font> and<br/> the <i>baz</i>>;
+  labelloc = "t"; // place the label at the top (b seems to be default)
+
+  node [shape=plaintext]
+
+  FOO -> {BAR, BAZ};
+
+}
+....
+
+[quote, Abraham Lincoln, Address delivered at the dedication of the Cemetery at Gettysburg]
+____
+Four score and seven years ago our fathers brought forth
+on this continent a new nation...
+____
+
+[graphviz, rank, svg]
+....
+include::snippet/rank.dot[Rank]
+....
+
+[%collapsible]
+====
+Example block turns into collapsible summary/details.
+====
+
+[graphviz, rank-level, svg]
+....
+include::snippet/same-level.dot[Same Level]
+....
+
+
+=== Resources
+
+* https://renenyffenegger.ch/notes/tools/Graphviz/examples/index

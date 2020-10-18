@@ -113,6 +113,8 @@ include::example$motherboard.dot[Components of motherboard]
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NkknclAeUZ8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ++++
 
+video::NkknclAeUZ8[youtube, title="what are chiplets?", width=600, height=400]
+
 ==== How did AMD made ZEN 2 faster?
 ++++
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-RT5sQZ-ckY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
