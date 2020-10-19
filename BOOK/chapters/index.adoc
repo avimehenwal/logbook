@@ -1,6 +1,8 @@
 = Index
+
 :icons: font
 
 == Chapter List
 
 . xref:vim.adoc[vim 8.2]
+. xref:fonts.adoc[Fonts on linux]

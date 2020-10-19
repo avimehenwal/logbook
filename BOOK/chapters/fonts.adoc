@@ -1,0 +1,38 @@
+= Fonts
+:icons: font
+:experimental:
+
+== Install Font
+
+.install NerdFonts on Ubuntu
+[source,bash]
+----
+echo "[-] Download fonts [-]"
+echo "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DroidSansMono.zip"
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DroidSansMono.zip
+unzip DroidSansMono.zip -d ~/.fonts
+fc-cache -fv
+echo "done!"
+----
+
+.Check if font is installed
+[source,bash]
+----
+fc-list | grep -i droid
+----
+
+== Use-casses
+
+* [x] Add icons to ranger
+* [x] Use ranger with vim
+
+* https://www.chrisatmachine.com/Neovim/07-ranger/
+* https://pandoc.org/
+
+== https://sw.kovidgoyal.net/kitty/index.html[Kitty]
+
+Fasted GPU based terminal emulator
+
+== Resources
+
+* https://www.nerdfonts.com/[Nerdfonts]

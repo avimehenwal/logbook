@@ -1,12 +1,13 @@
 = VIM
 :icons: font
 :experimental:
+:doc: https://vim-jp.org/vimdoc-en/channel.html#job-channel-overview[vim documentation, title="official vim documentation"]
 
 == Emacs
 
 > Its a development environment
 
-* Features a Turing complete programming language
+* Features a Turing complete programming language. Check {doc}
 
 [source, vim]
 ....
@@ -43,13 +44,62 @@ TIP: vim can use `vimscript`, `nodejs` and `python` runners
 | Text Completion | kbd:[ctrl + x + p/n]
 | File name Completion | kbd:[ctrl + x/f]
 | Dictionaryi/ Thesaures Completion | kbd:[ctrl + x + ctrl + k]
-
 |===
+
+== Text Objects
+
+https://vim-jp.org/vimdoc-en/motion.html#object-select[Text Object selection]
+
+== Plugins
+
+1. vim-table-mode - convert vim to a spreadsheet editor
+2. https://github.com/vimwiki/vimwiki[vimWiki]
+3. https://github.com/k-takata/minpac[Minpac] uses latest vim 8 features like https://vim-jp.org/vimdoc-en/channel.html#job-channel-overview[job control]
+
+* install/update packages `:call minpac#update()`
+* watch execution messages `:messages `
+
 
 == Setup vim like vscode
 
+=== Search Patterns
 
+[source, vim]
+....
+:vim /text/ %
+....
+
+Then use kbd:[[ + q] and kbd:[] + q] to navigate next and previous resul
+
+* Execute multiple vim commands from a batch file against the current buffer
+* Use Omni-completion
+
+== Changes
+
+kbd:[g + ;] or kbd:[g + ,] , to view all changes `:changes` and `:jumps` to view all jumps
+
+
+== Features
+
+* Quickfix window
+* Use vimgrep + quickfiz window
+* https://medium.com/@lakshmankumar12/quickfix-and-location-list-in-vim-ca0292ac894d[quickfix vs Location List]
+* http://vimcasts.org/episodes/project-wide-find-and-replace/[Project wide Find and replace]
+
+== Packages
+
+New in version 8
+
+* Query runtime-path `:set rtp?`
+** Should list the paths of plaugins installed
+
+(inner object)
 
 == References
 
 * https://vimconf.org/2018/slides/Effective_Modern_Vim_scripting_at_vimconf2018_for_PDF.pdf[dark vimmer, pdf]
+
+Hello :blu
+"Hello world"
+// vim: set syntax=asciidoc:
+
