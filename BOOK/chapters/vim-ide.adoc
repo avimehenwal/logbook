@@ -1,0 +1,88 @@
+= VIM IDE
+:icons: font
+:experimental:
+
+== IDE
+
+* configure compilers
+* Use search and regex
+* turn on syntax not to hurt your eyes a lot
+* Intellisense and autocompletion
+**  Coc offers out of the box support for javascript/typescript, json, html, css, vue, php, java, ruby, rust, yaml, python as well as third party support for many other languages including go and dart.
+* set `set path?` to `:pwd` so that you can do stuff like `:find module_name`
+** `setlocal path=.,**`
+* Setup include search, not just the local search using `#` and `*`
+** `set include?`
+
+== Vimscript aka VimL
+
+> Scripting language built into vim
+
+* Interpreted language
+* functional and OOP
+* `:help variables`
+** funcref
+** job
+** Channel
+** Blob - binary data
+* Everything is a string
+** Use double quotes for interpolation
+* Use `autocmd` with groups and DO NOT register multiple events when file is sourced multiple times;
+* Rather than putting most of your plugin inside `plugin` directory, try to put it inside `autoload` directory as it gets loaded on demand.
+* Lua is faster than vimL
+
+NOTE: More vimL in plugin directory can increase the startup time.
+`:help write-plugin`
+
+CAUTION: Cannot use comments with multiline statements.
+
+[qanda]
+How to create and use variables?::
+	Using `let`
+How to write multiline variables?::
+	Using `\`
+How to have local keyboard mappings only?::
+	Use `:mapclear <buffer>`
+How to I list only insert mode mappings?::
+	`:imap`
+Which key is bound to which keymapping?::
+	`:help index`
+https://unix.stackexchange.com/questions/171132/can-vimrc-be-divided-into-multiple-files[Can vimrc be divided into multiple files?]::
+	Use `ftplugins` File Type Plugin:::
+		is a script that is run automatically when Vim detects the type of file when the file is created or opened. 
+
+TIP: Local mappings are also cleared when a buffer is deleted, but not when it is
+unloaded.  Just like local option values.
+
+
+[source, vimscript]
+....
+let t = v:null <1>
+let list = [
+	\ 1, " first <2>
+]
+....
+<1> Variable Scoping Readonly, cannot modify them
+<2> Comments in multiline statement NOT allowed
+
+=== Variable Scoping
+
+`:help variable`
+
+|===
+| l | local
+| s | script
+| b | buffer
+| g | global
+| w | window 
+| t | tab
+|===
+
+== Plugins
+
+[graphviz, vim-plugins, svg]
+....
+include::../snippet/vim-plugin.dot[]
+....
+
+`:help function`

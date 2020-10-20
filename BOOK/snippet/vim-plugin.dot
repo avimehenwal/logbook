@@ -1,0 +1,11 @@
+digraph D {
+	title="Types of vim plugins"
+
+	node [colorscheme=accent3, style=filled]
+	
+	a [fillcolor=1 label="Vim Plugins"]
+	b [fillcolor=2 label="global Plugins"]
+	c [fillcolor=3 label="FileType Plugins"]
+
+	a -> {b,c}
+}

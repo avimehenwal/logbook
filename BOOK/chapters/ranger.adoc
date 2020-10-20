@@ -1,0 +1,29 @@
+= Ranger
+:icons: font
+:experimental:
+
+== Tool
+
+How to use it?
+
+* Use `marks` and *Bookmarks*
+* `:find`
+* `:travel`
+
+[qanda]
+How do I create files and directories?::
+  Use kbd:[F7] for folders and `:touch` for files
+How do I delete files and folders?::
+  Press kbd:[dD + Enter] when on top of file/folder
+How do I create tabs and switch between them?::
+  create `gn` and switching kbd:[Alt + 1/2/3]
+How to mark/ tag the files?::
+  Press kbd:[t]
+Rename a file?::
+  vim like kbd:[cw]
+
+
+== Resources
+
+* https://www.reddit.com/r/ranger/rising/
+* https://github.com/ranger/ranger/wiki/Official-user-guide

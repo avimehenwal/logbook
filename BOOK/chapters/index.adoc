@@ -6,3 +6,4 @@
 
 . xref:vim.adoc[vim 8.2]
 . xref:fonts.adoc[Fonts on linux]
+. xref:vim-ide.adoc[Vim IDE]

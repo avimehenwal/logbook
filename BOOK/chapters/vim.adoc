@@ -82,9 +82,10 @@ kbd:[g + ;] or kbd:[g + ,] , to view all changes `:changes` and `:jumps` to view
 == Features
 
 * Quickfix window
-* Use vimgrep + quickfiz window
+* Use vimgrep + quickfiz window + make
 * https://medium.com/@lakshmankumar12/quickfix-and-location-list-in-vim-ca0292ac894d[quickfix vs Location List]
 * http://vimcasts.org/episodes/project-wide-find-and-replace/[Project wide Find and replace]
+* Popup windows
 
 == Packages
 
@@ -93,13 +94,110 @@ New in version 8
 * Query runtime-path `:set rtp?`
 ** Should list the paths of plaugins installed
 
-(inner object)
+NOTE: Vim is an extensible editor.
+
+
+== Quickfix
+
+Execute a command in all the buffers in quickfix or location list: `:cdo`
+When you use 'makeprg', Vim parses the output according to 'errorformat' to retrieve error messages from the output.
+https://stackoverflow.com/questions/16415370/executing-current-python-file-in-vim-creates-new-file-if-current-time-is-parsed
+
+popup-windows
+https://vi.stackexchange.com/questions/24462/what-are-the-new-popup-windows-in-vim-8-2
+
+
+== Plugin Developers
+
+* Job control, asynchrous
+* Popup windows
+* clock and timers
+* events and IPC channels
+* Text Properties - attacked to text buffers
+** `prop_type_add()`
+
+https://www.vim.org/vim-8.2-released.php
+
+== In built Terminal Emulator
+
+. Built into vim
+. Let vim capture the terminal in normal mode kbd:[CTRL + w + N]
+
+== FAQ
+
+TIP: Colon commands can be abbreviated, edited and repeated.  Completion is available for
+nearly everything.
+
+[qanda]
+How to view and change the project root directory?::
+  Use `:pwd` and `:c`
+How to use GNU make build tool with vim?::
+  Vim already has support for Makefiles `:make`. See `:help make`
+Popup Windows::
+  show messages, function prototypes, code snippets and anything else on top of the text being edited.
+Where can I find list of all vim Events?::
+  https://tech.saigonist.com/b/code/list-all-vim-script-events.html[Here is a list]
+How to use shell?::
+  Serveral ways.
+  . Use `:terminal`
+  . Use `:!<command>` to run single command
+  . Use `:shell` to Start a subshell and return to vim after shell is exit,
+How to close the terminal? E947: job still running in buffer?::
+  kbd:[Ctrl + d]. Running process in a terminal buffer is treated mostly the same way as "an unsaved file
+How to start vim with some coomands?::
+  `vim -c "set ff=dos" -c wq  mine.mak`
+Which keybindings are already in use?::
+  `:verbose map`
+How to print and test vim rtp?::
+  `vim --cmd 'echo &rtp' --cmd 'q' /dev/null`
+  `vim -Esc 'verbose echo &rtp|q'`
+  `vim --cmd 'echo $VIMRUNTIME|q'`
+Project specific settings?::
+  https://vim.fandom.com/wiki/Project_specific_settings[Project_specific_settings]
+How to use a specific vimrc file?::
+  `vim -u <vimrc file>` Also look at `:help exrc`
+List all functions loaded in vim?::
+  `:verbose function` also see `:help function`
+How to popullate a quickfix window?::
+  `:help :cwindow`
+How do I generate and use tags like in vimdoc?::
+  Generate tags `ctags -R`. To use them `:tags <TAB>`. Alternative `:help cscope`
+  http://ctags.sourceforge.net/languages.html[41 supported languages]
+  TIP: They both are essentially source code *indexing* tools
+Vimscript cheatsheet?::
+  https://devhints.io/vimscript[cheatsheet]
+Can we have multiple patters in autocommands?::
+  Yes `:help autocmd-patterns`
+How to run multiple commands at once?::
+  https://vim.fandom.com/wiki/Multiple_commands_at_once[Using pipe sign] `:help bar`
+List of all vim options?::
+  `:help option` or `:options`
+List all vim script files sourced?::
+  `:help scriptnames`
+When to use `system()` and `execute`?::
+  |===
+  | `system` | to use output of bash command in variable as string
+  | `execute` | to `|` pipe commands `:execute '!ls' | echo "theend"`
+  |===
+How to run a macro on visual selection?::
+  `:'<,'>normal @q`
+How to run shell commands and replace current buffer output?::
+  `:%!column -t` `:%!sort -k1`
+Evaluate within register?::
+  `=` Evaluation Register `:help @=`
+How to run vimscript in current buffer?::
+  `:help Run` using `gdb`
+
+.differences
+|===
+| https://en.wikipedia.org/wiki/Terminal_emulator[terminal] | text input/output environment
+| console | physical terminal
+| https://en.wikipedia.org/wiki/Command-line_interface[shell] | command line interpreter
+|===
 
 == References
 
 * https://vimconf.org/2018/slides/Effective_Modern_Vim_scripting_at_vimconf2018_for_PDF.pdf[dark vimmer, pdf]
+* https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
 
-Hello :blu
-"Hello world"
 // vim: set syntax=asciidoc:
-

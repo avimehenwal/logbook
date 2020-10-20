@@ -23,9 +23,9 @@ two := two ${later_variable}
 later_variable = later
 
 clean:
-	rm -r ${DIST} || true
-	rm -r ${ART} || true
-	rm -r ? || true
+	rm --recursive --force ${DIST}
+	rm --recursive --force ${ART}
+	rm --recursive --force ?
 
 build: clean
 	${asciidoctor} \
