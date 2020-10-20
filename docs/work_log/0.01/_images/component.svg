@@ -1,0 +1,28 @@
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 373 379.8"
+  xml:space="preserve">
+  <style>
+    .st0,
+    .st1 {
+      fill: none;
+      stroke: #eee;
+      stroke-width: 14;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 22.9256
+    }
+
+    .st1 {
+      stroke: #6a2
+    }
+  </style>
+  <path class="st0"
+    d="M322.2 74.2l28.1-28.1c2.1-2.1 1.7-5.8-.8-8.3l-10.7-10.7c-2.5-2.5-6.2-2.8-8.3-.8l-28.1 28.1M263.5 273.8l-10.1-10.1-10-10-10-10M203.2 213.5l-10-10-10.1-10-10-10.1-10-10M132.9 143.2l-10-10-10.1-10-10-10.1" />
+  <path class="st1" d="M210.8 165.8l-55.3 55.3" />
+  <path class="st0" d="M234.7 84.2L52.3 190.7c-10.5 6.1-14.2 36.8-8 47.3l197-117.6" />
+  <path class="st1" d="M44.2 238l-22.8 23.3" />
+  <path class="st0" d="M290.4 139.9L181.9 328.3c-6 10.5-32.8 10.2-43.4 4.1l117.6-197" />
+  <path class="st1" d="M140.3 329.5l-23.7 25.3" />
+  <path d="M291.3 82.8c-6.5-6.5-17-6.5-23.5 0s-6.5 17 0 23.5 17 6.5 23.5 0 6.5-17.1 0-23.5h0z" fill="none" stroke="#6a2"
+    stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.926" />
+  <path class="st1" d="M312.3 64.3c-17.6-17.6-46.1-17.6-63.7 0s-17.6 46.1 0 63.7 46.1 17.6 63.7 0 17.6-46.1 0-63.7z" />
+</svg>
